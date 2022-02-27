@@ -153,9 +153,9 @@ yat:
 # Page default value
 # defaults:
 #   home:
-heading: "대충 내가 코딩 끄적이는 사이트"
-subheading: "절대 참조하지 마시오"
-banner: "https://user-images.githubusercontent.com/98242048/152352885-53ba563c-2656-4a08-a5f7-b6f1bcaf0356.png"
+# heading: "대충 내가 코딩 끄적이는 사이트"
+# subheading: "절대 참조하지 마시오"
+# banner: "https://user-images.githubusercontent.com/98242048/152352885-53ba563c-2656-4a08-a5f7-b6f1bcaf0356.png"
 
 # Banner default settings
 # These banner settings are for global banner default, but you can also
