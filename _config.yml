@@ -165,7 +165,7 @@ banner: "https://user-images.githubusercontent.com/98242048/152352885-53ba563c-2
 #loop: true              # Video loop
 #volume: 0               # Video volume (100% is 1.0)
 #start_at: 0             # Video start time
-image: https://user-images.githubusercontent.com/98242048/152352885-53ba563c-2656-4a08-a5f7-b6f1bcaf0356.png             # Image banner source
+#image: https://user-images.githubusercontent.com/98242048/152352885-53ba563c-2656-4a08-a5f7-b6f1bcaf0356.png             # Image banner source
 #opacity: 1.0            # Banner opacity (100% is 1.0)
 #background: "rgba(0, 0, 0, 0.8)"  # Banner background (Could be a image)
 #height: "640px"         # Banner default height
