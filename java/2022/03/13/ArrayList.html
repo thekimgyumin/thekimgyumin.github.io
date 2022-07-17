@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-translate-customization" content="108d9124921d80c3-80e20d618ff053c8-g4f02ec6f3dba68b7-c">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>ArrayList | 대충 thekim이 하는 코딩 블로그</title>
+<meta name="generator" content="Jekyll v4.2.2">
+<meta property="og:title" content="ArrayList">
+<meta name="author" content="thekimgyumin">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="ArrayList란 일반 배열과 동일하게 연속된 메모리 공간을 사용하며 인덱스는 0부터 시작한다. 하지만 배열이 크기가 고정인 반면 ArrayList는 크기가 가변적으로 변한다.">
+<meta property="og:description" content="ArrayList란 일반 배열과 동일하게 연속된 메모리 공간을 사용하며 인덱스는 0부터 시작한다. 하지만 배열이 크기가 고정인 반면 ArrayList는 크기가 가변적으로 변한다.">
+<link rel="canonical" href="https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/03/13/ArrayList.html">
+<meta property="og:url" content="https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/03/13/ArrayList.html">
+<meta property="og:site_name" content="대충 thekim이 하는 코딩 블로그">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2022-03-13T00:00:00+00:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="ArrayList">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"thekimgyumin"},"dateModified":"2022-03-13T00:00:00+00:00","datePublished":"2022-03-13T00:00:00+00:00","description":"ArrayList란 일반 배열과 동일하게 연속된 메모리 공간을 사용하며 인덱스는 0부터 시작한다. 하지만 배열이 크기가 고정인 반면 ArrayList는 크기가 가변적으로 변한다.","headline":"ArrayList","mainEntityOfPage":{"@type":"WebPage","@id":"https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/03/13/ArrayList.html"},"url":"https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/03/13/ArrayList.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="shortcut icon" href="">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-noto-sans@0.0.72/index.min.css">
+  <link rel="stylesheet" href="/jekyll-theme-yat/assets/css/main.css">
+  <script src="/jekyll-theme-yat/assets/js/main.js"></script><link type="application/atom+xml" rel="alternate" href="https://thekimgyumin.github.io//jekyll-theme-yat/feed.xml" title="대충 thekim이 하는 코딩 블로그">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+<!-- and it's easy to individually load additional languages -->
+<script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/go.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+// Init highlight js
+document.addEventListener('DOMContentLoaded', function(event) {
+  var els = document.querySelectorAll('pre code')
+
+  function addLangData(block) {
+    var outer = block.parentElement.parentElement.parentElement;
+    var lang = block.getAttribute('data-lang');
+    for (var i = 0; i < outer.classList.length; i++) {
+      var cls = outer.classList[i];
+      if (cls.startsWith('language-')) {
+        lang = cls;
+        break;
+      }
+    }
+    if (!lang) {
+      cls = block.getAttribute('class');
+      lang = cls ? cls.replace('hljs ', '') : '';
+    }
+    if (lang.startsWith('language-')) {
+      lang = lang.substr(9);
+    }
+    block.setAttribute('class', 'hljs ' + lang);
+    block.parentNode.setAttribute('data-lang', lang);
+  }
+
+  function addBadge(block) {
+    var enabled = ('true' || 'true').toLowerCase();
+    if (enabled == 'true') {
+      var pre = block.parentElement;
+      pre.classList.add('badge');
+    }
+  }
+
+  function handle(block) {
+    addLangData(block);
+    addBadge(block)
+    hljs.highlightBlock(block);
+  }
+
+  for (var i = 0; i < els.length; i++) {
+    var el = els[i];
+    handle(el);
+  }
+});
+</script>
+
+<style>
+  /* code language badge */
+  pre.badge::before {
+    content: attr(data-lang);
+    color: #fff;
+    background-color: #ff4e00;
+    padding: 0 .5em;
+    border-radius: 0 2px;
+    text-transform: uppercase;
+    text-align: center;
+    min-width: 32px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+  }
+
+  /* fix wrong badge display for firefox browser */
+  code > table pre::before {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="site-header " role="banner">
+
+  <div class="wrapper">
+    <div class="site-header-inner">
+<span class="site-brand"><a class="site-brand-inner" rel="author" href="/jekyll-theme-yat/">
+  <img class="site-favicon" title="대충 thekim이 하는 코딩 블로그" src="" onerror="this.style.display='none'">
+  대충 thekim이 하는 코딩 블로그
+</a>
+</span><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger">
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewbox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
+              </svg>
+            </span>
+          </label>
+
+          <div class="trigger">
+<a class="page-link" href="/jekyll-theme-yat/about.html">ABOUT</a><a class="page-link" href="/jekyll-theme-yat/archives.html">ARCHIVES</a><a class="page-link" href="/jekyll-theme-yat/categories.html">CATEGORIES</a><a class="page-link" href="/jekyll-theme-yat/">HOME</a><a class="page-link" href="/jekyll-theme-yat/tags.html">TAGS</a>
+
+
+
+
+
+
+
+
+
+<span class="page-link">
+
+
+
+<div id="google_translate_element" style="display: none;">
+</div>
+
+<span class="ct-language">
+  <ul class="list-unstyled ct-language-dropdown">
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="en">
+          
+          <img src="https://cdn.countryflags.com/thumbs/united-states-of-america/flag-400.png" title="English">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="fr">
+          
+          <img src="https://cdn.countryflags.com/thumbs/france/flag-400.png" title="French">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="zh-CN">
+          
+          <img src="https://cdn.countryflags.com/thumbs/china/flag-400.png" title="Chinese(Simple)">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ja">
+          
+          <img src="https://cdn.countryflags.com/thumbs/japan/flag-400.png" title="Japanese">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ko">
+          
+          <img src="https://cdn.countryflags.com/thumbs/south-korea/flag-400.png" title="Korean">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ru">
+          
+          <img src="https://cdn.countryflags.com/thumbs/russia/flag-400.png" title="Russian">
+          
+        </a>
+      </li>
+    
+  </ul>
+</span>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    autoDisplay: false,
+    layout: google.translate.TranslateElement.InlineLayout.VERTICAL
+  }, 'google_translate_element');
+
+  // Links to cross-origin destinations are unsafe
+  var gll = document.getElementsByClassName('goog-logo-link')[0];
+  if (gll) {
+    gll.setAttribute('rel', 'noopener');
+  }
+
+  function restoreLang() {
+    var iframe = document.getElementsByClassName('goog-te-banner-frame')[0];
+    if (!iframe) return;
+
+    var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+    var restore_el = innerDoc.getElementsByTagName("button");
+
+    for (var i = 0; i < restore_el.length; i++) {
+      if (restore_el[i].id.indexOf("restore") >= 0) {
+        restore_el[i].click();
+        var close_el = innerDoc.getElementsByClassName("goog-close-link");
+        close_el[0].click();
+        return;
+      }
+    }
+  }
+
+  function triggerHtmlEvent(element, eventName) {
+    var event;
+    if (document.createEvent) {
+      event = document.createEvent('HTMLEvents');
+      event.initEvent(eventName, true, true);
+      element.dispatchEvent(event);
+    } else {
+      event = document.createEventObject();
+      event.eventType = eventName;
+      element.fireEvent('on' + event.eventType, event);
+    }
+  }
+
+  var googleCombo = document.querySelector("select.goog-te-combo");
+  var langSelect = document.querySelector('.ct-language');
+  langSelect.addEventListener('click', function(event) {
+    if (!event.target) {
+      return;
+    }
+
+    var selected = document.querySelector('.ct-language .ct-language-selected');
+    if (selected) {
+      selected.classList.remove('ct-language-selected');
+    }
+
+    var target = event.target;
+    while (target && target !== langSelect ) {
+      if (target.matches('.lang-select')) {
+        break;
+      }
+      target = target.parentElement;
+    }
+
+    if (target && target.matches('.lang-select')) {
+      var lang = target.getAttribute('data-lang');
+      if (googleCombo.value == lang) {
+        restoreLang();
+      } else {
+        target.parentElement.classList.add('ct-language-selected');
+        googleCombo.value = lang;
+        triggerHtmlEvent(googleCombo, 'change');
+      }
+    }
+
+    event.preventDefault();
+  });
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</span>
+</div>
+        </nav>
+</div>
+  </div>
+</header>
+
+<script>
+  function initHeader() {
+    var lastScrollY = getScrollPos().y;
+    var documentElement = document.documentElement;
+
+    function storeScrollData() {
+      var y = getScrollPos().y;var scrollStatus = "";
+
+      if (y <= 0) {
+        scrollStatus = "top";
+      } else if ((window.innerHeight + y) >= document.body.offsetHeight) {
+        scrollStatus = "bottom";
+      } else {
+        var isScrollDown = (y - lastScrollY > 0) ? true : false;
+        scrollStatus = isScrollDown ? "down" : "up";
+      }
+
+      lastScrollY = y;
+      documentElement.setAttribute("data-scroll-status", scrollStatus);
+    }
+
+    window.addEventListener('scroll', function(e) {
+      storeScrollData();
+    });
+
+    storeScrollData();
+  }
+  document.addEventListener('DOMContentLoaded', initHeader);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  function hashLocate(hashValue) {
+    hashValue = hashValue.replace(/^.*#h-/, '');
+    hashValue = decodeURIComponent(hashValue);
+    var element = document.getElementById(hashValue);
+
+    if (!element) {
+      return;
+    }
+
+    var header = document.querySelector('header.site-header');
+    var headerRect = header.getBoundingClientRect();
+    var headerTop = Math.floor(headerRect.top);
+    var headerHeight = Math.floor(headerRect.height);
+    var scrollPos = getScrollPos();
+    var offsetY = element.offsetTop - (headerTop + headerHeight + 20);
+
+    if (offsetY == scrollPos.y) {
+      return;
+    }
+
+    if (headerTop == 0  && offsetY > scrollPos.y) {
+      offsetY += headerHeight + 2;
+    } else if (headerTop < 0  && offsetY < scrollPos.y) {
+      offsetY -= headerHeight - 2;
+    }
+
+    smoothScrollTo(offsetY);
+  }
+
+  // The first event occurred
+  window.addEventListener('load', function(event) {
+    if (window.location.hash) {
+      hashLocate(window.location.hash);
+    }
+  });
+
+  // The first event occurred
+  window.addEventListener('click', function(event) {
+    if (event.target.tagName.toLowerCase() == 'a') {
+      hashLocate(event.target.getAttribute('href'));
+    }
+  });
+</script>
+<div class="theme-toggle">
+  <input type="checkbox" id="theme-switch">
+  <label for="theme-switch">
+    <div class="toggle"></div>
+    <div class="names">
+      <p class="light">Light</p>
+      <p class="dark">Dark</p>
+    </div>
+  </label>
+</div>
+
+
+
+
+<script>
+  (function() {
+    var sw = document.getElementById('theme-switch');
+    var html = document.getElementsByTagName('html')[0];
+    var nightModeOption = ('auto' || 'auto').toLowerCase();
+    var storage = nightModeOption === 'manual'
+        ? localStorage
+        : sessionStorage;
+    var themeData = loadThemeData();
+
+    function saveThemeData(data) {
+      storage.setItem('theme', JSON.stringify(data));
+    }
+
+    function loadThemeData() {
+      var data = storage.getItem('theme');
+      try {
+        data = JSON.parse(data ? data : '');
+      } catch(e) {
+        data = { nightShift: undefined, autoToggleAt: 0 };
+        saveThemeData(data);
+      }
+      return data;
+    }
+
+    function handleThemeToggle(nightShift) {
+      themeData.nightShift = nightShift;
+      saveThemeData(themeData);
+      html.dataset.theme = nightShift ? 'dark' : 'light';
+      setTimeout(function() {
+        sw.checked = nightShift ? true : false;
+      }, 50);
+    }
+
+    function autoThemeToggle() {
+      // Next time point of theme toggle
+      var now = new Date();
+      var toggleAt = new Date();
+      var hours = now.getHours();
+      var nightShift = hours >= 19 || hours <=7;
+
+      if (nightShift) {
+        if (hours > 7) {
+          toggleAt.setDate(toggleAt.getDate() + 1);
+        }
+        toggleAt.setHours(7);
+      } else {
+        toggleAt.setHours(19);
+      }
+
+      toggleAt.setMinutes(0);
+      toggleAt.setSeconds(0);
+      toggleAt.setMilliseconds(0)
+
+      var delay = toggleAt.getTime() - now.getTime();
+
+      // auto toggle theme mode
+      setTimeout(function() {
+        handleThemeToggle(!nightShift);
+      }, delay);
+
+      return {
+        nightShift: nightShift,
+        toggleAt: toggleAt.getTime()
+      };
+    }
+
+    // Listen the theme toggle event
+    sw.addEventListener('change', function(event) {
+      handleThemeToggle(event.target.checked);
+    });
+
+    if (nightModeOption == 'auto') {
+      var data = autoThemeToggle();
+
+      // Toggle theme by local setting
+      if (data.toggleAt > themeData.autoToggleAt) {
+        themeData.autoToggleAt = data.toggleAt;
+        handleThemeToggle(data.nightShift);
+      } else {
+        handleThemeToggle(themeData.nightShift);
+      }
+    } else if (nightModeOption == 'manual') {
+      handleThemeToggle(themeData.nightShift);
+    } else {
+      var nightShift = themeData.nightShift;
+      if (nightShift === undefined) {
+        nightShift = nightModeOption === 'on';
+      }
+      handleThemeToggle(nightShift);
+    }
+  })();
+</script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="framework">
+  <section class="main">
+
+     <div class="post">
+  <section>
+
+
+
+
+
+
+
+
+
+<header class="post-header">
+  <h1 class="post-title p-name" itemprop="name headline">ArrayList</h1>
+  <h2 class="post-subtitle"></h2>
+
+  <p class="post-meta">
+    <time class="dt-published" datetime="2022-03-13T00:00:00+00:00" itemprop="datePublished"><i class="fa fa-calendar"></i> Mar 13, 2022
+    </time>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 3 mins</span>
+  </p>
+<div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#JAVA">#JAVA</a></div></header>
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <div class="post-content e-content" itemprop="articleBody">
+
+      <h2 id="arraylist란">ArrayList란</h2>
+<p>일반 배열과 동일하게 연속된 메모리 공간을 사용하며 인덱스는 0부터 시작한다. 하지만 배열이 크기가 고정인 반면 ArrayList는 크기가 가변적으로 변한다.</p>
+
+<p>내부적으로 저장이 가능한 메모리 용량이 있으며 현재 사용 중인 공간의 크기가 있다. 만약 현재 가용량 이상을 저장하려고 할 때 더 큰 공간의 메모리를 새롭게 할당한다.</p>
+
+<h3 id="생성">생성</h3>
+<pre>
+<code>
+import java.util.ArrayList;
+
+public class ArrayListTest {
+    public static void main(String[] args) {
+        ArrayList<integer> integers1 = new ArrayList<integer>(); // &lt;&gt; 부분에 타입 지정(생략 가능)
+        ArrayList<integer> integers2 = new ArrayList&lt;&gt;(10); // ()에 초기 용량 설정(생략 가능)
+        ArrayList<integer> integers3 = new ArrayList&lt;&gt;(integers1); // 다른 Collection값으로 초기화
+        ArrayList<integer> integers4 = new ArrayList&lt;&gt;(Arrays.asList(1, 2, 3, 4, 5)); // Arrays.asList()
+    }
+}
+&lt;/code&gt;
+&lt;/pre&gt;
+Set이나 다른 ArrayList를 전달하면 해당 Collections의 값들로 초기화된다.
+
+가변 인자를 전달받는 Arrays.asList()를 사용하면 기본 값들로 생성 가능하다.
+
+### ArrayList 엘레멘트 추가/변경
+ArrayList를 생성한 후 add() 메소드로 엘레멘트를 추가할 수 있다.
+
+또한 set() 메소드로 기존에 추가된 값을 변경하는 것도 가능하다.
+<pre>
+<code>
+import java.util.ArrayList;
+
+public class ArrayListTest {
+    public static void main(String[] args) {
+        ArrayList<string> colors = new ArrayList&lt;&gt;();
+        // add() 메소드
+        colors.add("Black");
+        colors.add("White");
+        colors.add(0, "Green");
+        colors.add("Red");
+
+        // set() 메소드
+        colors.set(0, "Blue");
+
+        System.out.println(colors);
+    }
+}
+&lt;/code&gt;
+&lt;/pre&gt;
+출력값 : Blue Black White Red
+
+add()는 기본적으로 리스트의 가장 끝에 값을 추가한다.
+
+별도로 인덱스를 지정하면 해당 인덱스에 값이 추가되고 그 인덱스부터의 값들이 1 칸씩 밀린다.
+
+### ArrayList 엘레멘트 삭제
+추가했던 값을 삭제할 때는 remove() 메소드를 호출한다.
+<pre>
+<code>
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class ArrayListTest {
+    public static void main(String[] args) {
+        ArrayList<string> colors = new ArrayList&lt;&gt;(Arrays.asList("Black", "White", "Green", "Red"));
+        String removedColor = colors.remove(0);
+        System.out.println("Removed color is " + removedColor);
+
+        colors.remove("White");
+        System.out.println(colors);
+
+        colors.clear();
+        colors.add(Blue)
+        System.out.println(colors);
+    }
+}
+&lt;/code&gt;
+&lt;/pre&gt;
+출력값 : 
+
+Removed color is Black
+
+Green Red
+
+Blue
+
+삭제할 때는 엘레멘트의 인덱스를 입력하거나 엘레멘트를 직접 입력할 수 있다.
+
+인덱스를 통해 삭제할 경우 삭제되는 엘레멘트를 리턴받을 수 있다.
+
+값을 지움과 동시에 해당 값으로 별도의 작업이 필요한 경우 리턴을 받아서 사용하면 된다.
+
+ArrayList 안의 내용을 전체 삭제할 때는 clear()를 호출하면 된다.
+
+### ArrayList 전체 값 확인
+ArrayList의 모든 값들을 순회해서 출력하고 싶은 경우 다양한 방법을 사용할 수 있다.
+<pre>
+<code>
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.ListIterator;
+
+public class ArrayListTest {
+    public static void main(String[] args) {
+        ArrayList<string> colors = new ArrayList&lt;&gt;(Arrays.asList("Black", "White", "Green", "Red"));
+        // for-each 활용
+        for (String color : colors) {
+            System.out.print(color + "  ");
+        }
+        System.out.println();
+
+        // for문 활용
+        for (int i = 0; i &lt; colors.size(); ++i) {
+            System.out.print(colors.get(i) + "  ");
+        }
+        System.out.println();
+
+        // iterator 활용
+        Iterator<string> iterator = colors.iterator();
+        while (iterator.hasNext()) {
+            System.out.print(iterator.next() + "  ");
+        }
+        System.out.println();
+
+        // listIterator 활용
+        ListIterator<string> listIterator = colors.listIterator(colors.size());
+        while (listIterator.hasPrevious()) {
+            System.out.print(listIterator.previous() + "  ");
+        }
+        System.out.println();
+    }
+}
+&lt;/code&gt;
+&lt;/pre&gt;
+출력값 : 
+Black White Green Red
+Black White Green Red
+Black White Green Red
+Red Green White Black
+
+listIterator의 경우 생성 시 ArrayList의 크기를 입력해주고 역방향으로 출력할 수 있다.
+
+그래서 역순서로 출력이 되는 것을 확인할 수 있다.
+
+### 값 존재 유무 확인
+ArrayList의 안에 값이 존재하는지 존재한다면 어느 위치에 존재하는지 알고 싶은 경우가 있다.
+
+먼저 값이 존재하는지만 알고 싶은 경우 contains()를 사용한다.
+
+값이 존재할 때 어느 위치에 존재하는지 알고 싶은 경우 indexOf()를 사용할 수 있다.
+<pre>
+<code>
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class ArrayListTest {
+    public static void main(String[] args) {
+        ArrayList<string> colors = new ArrayList&lt;&gt;(Arrays.asList("Black", "White", "Green", "Red"));
+        boolean contains = colors.contains("Black");
+        System.out.println(contains);
+
+        int index = colors.indexOf("Blue");
+        System.out.println(index);
+
+        index = colors.indexOf("Red");
+        System.out.println(index);
+    }
+}
+&lt;/code&gt;
+&lt;/pre&gt;
+출력 : 
+
+true
+
+-1
+
+3
+
+contains()는 값이 있는 경우 true를, 값이 없는 경우 false를 리턴한다.
+
+indexOf()는 값이 존재하는 경우 해당 엘레멘트의 인덱스를 리턴한다.
+
+값이 존재하지 않을 경우 -1을 리턴하기 때문에 별도로 처리가 가능하다.
+</string></code></pre></string></string></string></code></pre></string></code></pre></string></code></pre></integer></integer></integer></integer></integer></code></pre>
+
+
+    </div>
+
+</article>
+<div class="post-nav">
+<a class="previous" href="/jekyll-theme-yat/git/2022/02/13/%EA%B0%84%EB%8B%A8%ED%95%9C-git-%EB%AA%85%EB%A0%B9%EC%96%B4-%EB%AA%A8%EC%9D%8C%EC%A7%91.html" title="간단한 git 명령어 모음집">간단한 git 명령어 모음집</a><a class="next" href="/jekyll-theme-yat/java/2022/03/13/map.html" title="map">map</a>
+</div>
+<div class="post-related">
+      <div>Related Articles</div>
+      <ul>
+        <li><a class="post-link" href="/jekyll-theme-yat/git/2022/02/13/%EA%B0%84%EB%8B%A8%ED%95%9C-git-%EB%AA%85%EB%A0%B9%EC%96%B4-%EB%AA%A8%EC%9D%8C%EC%A7%91.html" title="map">간단한 git 명령어 모음집</a></li>
+<li><a class="post-link" href="/jekyll-theme-yat/java/2022/03/13/map.html" title="map">map</a></li>
+<li><a class="post-link" href="/jekyll-theme-yat/java/2022/03/20/%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC.html" title="map">예외처리</a></li>
+<li><a class="post-link" href="/jekyll-theme-yat/java/2021/12/26/%EB%A6%AC%EC%8A%A4%ED%8A%B8.html" title="map">리스트</a></li>
+</ul>
+    </div>
+<div class="post-comments"></div></section>
+</div>
+
+
+  </section>
+  <section class="sidebar" style="margin-left: 15px;">
+    <!-- Get sidebar items --><style type="text/css" media="screen">
+.post-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+</style>
+
+<div class="post-menu">
+  <div class="post-menu-title">TOC</div>
+  <div class="post-menu-content"></div>
+</div>
+
+<script>
+  function generateContent() {
+    var menu = document.querySelector(".post-menu");
+    var menuContent =  menu.querySelector(".post-menu-content");
+    var headings = document.querySelector(".post-content").querySelectorAll("h2, h3, h4, h5, h6");
+
+    // Hide menu when no headings
+    if (headings.length === 0) {
+      return menu.style.display = "none";
+    }
+
+    // Generate post menu
+    var menuHTML = '';
+    for (var i = 0; i < headings.length; i++) {
+      var h = headings[i];
+      menuHTML += (
+        '<li class="h-' + h.tagName.toLowerCase() + '">'
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
+    }
+
+    menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
+
+    // The header element
+    var header = document.querySelector('header.site-header');
+
+    function doMenuCollapse(index, over_items) {
+      var items = menuContent.firstChild.children;
+
+      if (over_items == undefined) {
+        over_items = 20;
+      }
+
+      if (items.length < over_items) {
+        return;
+      }
+
+      var activeItem = items[index];
+      var beginItem = activeItem
+      var endItem = activeItem
+      var beginIndex = index;
+      var endIndex = index + 1;
+      while (beginIndex >= 0
+        && !items[beginIndex].classList.contains('h-h2')) {
+        beginIndex -= 1;
+      }
+      while (endIndex < items.length
+        && !items[endIndex].classList.contains('h-h2')) {
+        endIndex += 1;
+      }
+      for (var i = 0; i < beginIndex; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+      for (var i = beginIndex + 1; i < endIndex; i++) {
+        item = items[i]
+        // if (!item.classList.contains('h-h2')) {
+          item.style.display = '';
+        // }
+      }
+      for (var i = endIndex; i < items.length; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+    }
+
+    // Init menu collapsed
+    doMenuCollapse(-1);
+
+    // Active the menu item
+    window.addEventListener('scroll', function (event) {
+      var lastActive = menuContent.querySelector('.active');
+      var changed = true;
+      var activeIndex = -1;
+      for (var i = headings.length - 1; i >= 0; i--) {
+        var h = headings[i];
+        var headingRect = h.getBoundingClientRect();
+        var headerRect = header.getBoundingClientRect();
+        var headerTop = Math.floor(headerRect.top);
+        var headerHeight = Math.floor(headerRect.height);
+        var headerHeight = headerTop + headerHeight + 20;
+        if (headingRect.top <= headerHeight) {
+          var id = 'h-' + h.getAttribute('id');
+          var a = menuContent.querySelector('a[href="#' + id  + '"]');
+          var curActive = a.parentNode;
+          if (curActive) {
+            curActive.classList.add('active');
+            activeIndex = i;
+          }
+          if (lastActive == curActive) {
+            changed = false;
+          }
+          break;
+        }
+      }
+      if (changed) {
+        if (lastActive) {
+          lastActive.classList.remove('active');
+        }
+        doMenuCollapse(activeIndex);
+      }
+      event.preventDefault();
+    });
+  }
+  generateContent();
+</script>
+</section>
+</div>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/jekyll-theme-yat/"></data>
+
+  <div class="wrapper">
+    <div class="site-footer-inner">
+<div>Unpublished Work <span class="copyleft">©</span> 2017-2022 thekimgyumin</div>
+      <div>Powered by <a title="Jekyll is a simple, blog-aware, static site
+      generator." href="http://jekyllrb.com/">Jekyll</a> &amp; <a title="Yat, yet
+      another theme." href="https://github.com/jeffreytse/jekyll-theme-yat">Yat Theme</a>.</div>
+      <div class="footer-col rss-subscribe">Subscribe <a href="/jekyll-theme-yat/feed.xml">via RSS</a>
+</div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

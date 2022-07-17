@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://thekimgyumin.github.io//jekyll-theme-yat/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thekimgyumin.github.io//jekyll-theme-yat/" rel="alternate" type="text/html" /><updated>2022-07-17T03:36:18+00:00</updated><id>https://thekimgyumin.github.io//jekyll-theme-yat/feed.xml</id><title type="html">대충 thekim이 하는 코딩 블로그</title><subtitle>절대 이 사이트를 참고하지 마시오</subtitle><author><name>thekimgyumin</name></author><entry><title type="html">어노테이션</title><link href="https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/07/17/%EC%96%B4%EB%85%B8%ED%85%8C%EC%9D%B4%EC%85%98.html" rel="alternate" type="text/html" title="어노테이션" /><published>2022-07-17T00:00:00+00:00</published><updated>2022-07-17T00:00:00+00:00</updated><id>https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/07/17/%EC%96%B4%EB%85%B8%ED%85%8C%EC%9D%B4%EC%85%98</id><content type="html" xml:base="https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/07/17/%EC%96%B4%EB%85%B8%ED%85%8C%EC%9D%B4%EC%85%98.html"><![CDATA[<h2 id="어노테이션">어노테이션</h2>
+<p>자바 개발을 하다 보면 클래스, 메소드 또는 변수 앞에 @override 같은 @표시를 볼 수 있는데, 이를 어노테이션이라고 한다</p>
+
+<p>이는 JEE5(Java Platform, Enterprise Edition 5)부터 추가된 요소로, 이를 이용해 데이터의 유효성 검사를 쉽게 알 수 있고, 이와 관련된 코드가 깔끔해지게 된다</p>
+
+<p>어노테이션의 용도로는 다양한 목적이 있지만 메타 데이터의 비중이 가장 크다고 할 수 있다.</p>
+
+<h2 id="java에서-기본적으로-제공하는-어노테이션-종류">JAVA에서 기본적으로 제공하는 어노테이션 종류</h2>
+<ol>
+  <li>overridde
+    <ul>
+      <li>선언한 메서드가 오버라이드 되었다는 것을 나타낸다</li>
+      <li>만약 상위(부모) 클래스/인터페이스에서 해당 메서드를 찾을 수 없다면 컴파일 에러를 발생시킨다</li>
+    </ul>
+  </li>
+  <li>@Deprecated
+    <ul>
+      <li>해당 메서드가 더 이상 사용되지 않음을 표시한다</li>
+      <li>만약 사용할 경우 컴파일 경고를 발생시킨다</li>
+    </ul>
+  </li>
+  <li>@SuppressWarnings
+    <ul>
+      <li>선언한 곳의 컴파일 경고를 무사한다</li>
+    </ul>
+  </li>
+  <li>@SafeVarargs
+    <ul>
+      <li>Java 7부터 지원하며, 제네릭 같은 가변인자의 매개변수를 사용할 때의 경고를 무시한다</li>
+    </ul>
+  </li>
+  <li>@Functionallnterface
+    <ul>
+      <li>java 8부터 지원하며, 함수형 인터페이스를 지정하는 어노테이션이다</li>
+      <li>만약 메서드가 존재하지 않거나, 1개 이상의 메서드(default 메서드 제외)가 존재할 경우 컴파일 오류를 발생시킨다</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="구성">구성</h2>
+<p>우선 어노테이션의 구조를 보기 위해 아래의 코드를 참조해 보자</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@target</span><span class="o">(</span><span class="nc">ElementType</span><span class="o">.</span><span class="na">METHOD</span><span class="o">)</span>
+<span class="nd">@Retention</span><span class="o">(</span><span class="nc">RetentionPolicy</span><span class="o">.</span><span class="na">RUNTIME</span><span class="o">)</span>
+<span class="kd">public</span> <span class="nd">@interface</span> <span class="nc">CustomAnnotation</span><span class="o">{</span>
+    <span class="kt">boolean</span> <span class="nf">isCheck</span><span class="o">()</span> <span class="k">default</span> <span class="kc">true</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>먼저 1번, 2번 어노테이션 선언에 쓰인 어노테이션은 메타 어노테이션이라 하며 이를 이용해 커스텀 어노테이션을 작성할 수 있게 된다</p>
+
+<p>작업중…</p>]]></content><author><name>thekimgyumin</name></author><category term="JAVA" /><category term="JAVA" /><summary type="html"><![CDATA[어노테이션 자바 개발을 하다 보면 클래스, 메소드 또는 변수 앞에 @override 같은 @표시를 볼 수 있는데, 이를 어노테이션이라고 한다]]></summary></entry><entry><title type="html">제네릭</title><link href="https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/07/13/%EC%A0%9C%EB%84%A4%EB%A6%AD.html" rel="alternate" type="text/html" title="제네릭" /><published>2022-07-13T00:00:00+00:00</published><updated>2022-07-13T00:00:00+00:00</updated><id>https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/07/13/%EC%A0%9C%EB%84%A4%EB%A6%AD</id><content type="html" xml:base="https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/07/13/%EC%A0%9C%EB%84%A4%EB%A6%AD.html"><![CDATA[<h2 id="제네릭">제네릭</h2>
+<p>타입을 클래스 내부에서 지정하는 것이 아닌 외부에서 사용자에 의해 지정되는 것</p>
+
+<p>특정 타입을 미리 지정해주는 것이 아닌 필요에 의해 지정할 수 있도록 하는 일반 타입</p>
+
+<h3 id="장점">장점</h3>
+<p>잘못된 타입이 들어올 수 있는 것을 컴파일 단계에서 방지할 수 있다</p>
+
+<p>클래스 외부에서 타입을 지정해주기 때문에 따로 타입을 체크하고 변환해줄 필요가 없다(=관리하기 편하다)</p>
+
+<p>비슷한 기능을 지원하는 경우 코드의 재사용성이 높아진다</p>
+<hr />
+<h2 id="사용방법">사용방법</h2>
+<p>보통 제네릭은 아래 표의 타입들이 많이 쓰인다
+|타입|설명|
+|—|—|
+|&lt;T&gt;|Type|
+|&lt;E&gt;|Element|
+|&lt;K&gt;|Key|
+|&lt;V&gt;|Value|
+|&lt;N&gt;|Number|</p>
+
+<h3 id="선언-및-생성-방법">선언 및 생성 방법</h3>
+<h4 id="1-클래스-및-인터페이스-선언">1. 클래스 및 인터페이스 선언</h4>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Classname</span> <span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="o">{...}</span>
+<span class="kd">public</span> <span class="nc">Interface</span> <span class="nc">InterfaceName</span> <span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="o">{...}</span>
+</code></pre></div></div>
+<p>기본적으로 제네릭 클래스나 인터페이스의 경우 위와 같이 선언한다</p>
+
+<p>T 타입은 해당 블럭 {…} 안에서까지 유효하다</p>
+
+<p>또한 여기서 더 나아가 제네릭 타입을 두 개로 둘 수 있다</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Classname</span> <span class="o">&lt;</span><span class="no">T</span><span class="o">,</span> <span class="no">K</span><span class="o">&gt;</span> <span class="o">{...}</span>
+<span class="kd">public</span> <span class="nc">Interface</span> <span class="nc">InterfaceName</span> <span class="o">&lt;</span><span class="no">T</span><span class="o">,</span> <span class="no">K</span><span class="o">&gt;</span> <span class="o">{...}</span>
+</code></pre></div></div>
+<p>이렇듯 데이터 타입을 외부로부터 지정할 수 있도록 할 수 있다</p>
+
+<p>이렇게 생성된 제네릭 클래스를 사용하려면 객체를 생성해야 하는데 이때 구체적인 타입을 명시해야 한다</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ClassName</span> <span class="o">&lt;</span><span class="no">T</span><span class="o">,</span> <span class="no">K</span><span class="o">&gt;</span> <span class="o">{...}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">ClassName</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ClassName</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">Integer</span><span class="o">&gt;();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>위 예시대로라면 T는 String가 되고, K는 Integer가 된다</p>
+
+<p>이때 주의해야 할 점은 타입 파라미터로 명시할 수 있는 것은 참조 타입 밖에 올 수 없다. 즉 int, double, char 같은 primitive type은 올 수 없다는 것이다. 그래서 int형 double형 등 primitive type의 경우 Integer, Double 같은 Wrapper Type으로 쓰는 이유가 위와 같은 이유다</p>
+
+<p>작업중…</p>]]></content><author><name>thekimgyumin</name></author><category term="JAVA" /><category term="JAVA" /><summary type="html"><![CDATA[제네릭 타입을 클래스 내부에서 지정하는 것이 아닌 외부에서 사용자에 의해 지정되는 것]]></summary></entry><entry><title type="html">자바 자료형</title><link href="https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/05/01/%EC%9E%90%EB%B0%94-%EC%9E%90%EB%A3%8C%ED%98%95.html" rel="alternate" type="text/html" title="자바 자료형" /><published>2022-05-01T00:00:00+00:00</published><updated>2022-05-01T00:00:00+00:00</updated><id>https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/05/01/%EC%9E%90%EB%B0%94%20%EC%9E%90%EB%A3%8C%ED%98%95</id><content type="html" xml:base="https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/05/01/%EC%9E%90%EB%B0%94-%EC%9E%90%EB%A3%8C%ED%98%95.html"><![CDATA[<p>자바의 자료형에는 기본형(Primitive Type)과 참조형(Reference Type)이 있다.</p>
+
+<p>일반적으로 다음과 같이 분류한다</p>
+<pre><code class="language-mermaid">graph TD
+Pri[Primitive Type]
+Pri --&gt; Boo(Boolean Type)
+Pri --&gt; Num(Numeric Type)
+Num --&gt; Int(Integral Type)
+Int --&gt; IntType("Integer Type(short, int, long)")
+Int --&gt; Float("Floating Point Type(float, double)")
+Num --&gt; CharType("Character Type(char)")
+</code></pre>
+<pre><code class="language-mermaid">graph TD
+Ref[Reference Type]
+Ref --&gt; Class(Class Type)
+Ref --&gt; InterFace(Interface Type)
+Ref --&gt; Array(Array Type)
+Ref --&gt; Enum(Enum Type)
+Ref --&gt; etc(etc.)
+</code></pre>]]></content><author><name>thekimgyumin</name></author><category term="JAVA" /><category term="mermaid" /><summary type="html"><![CDATA[자바의 자료형에는 기본형(Primitive Type)과 참조형(Reference Type)이 있다.]]></summary></entry><entry><title type="html">예외처리</title><link href="https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/03/20/%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC.html" rel="alternate" type="text/html" title="예외처리" /><published>2022-03-20T00:00:00+00:00</published><updated>2022-03-20T00:00:00+00:00</updated><id>https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/03/20/%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC</id><content type="html" xml:base="https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/03/20/%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC.html"><![CDATA[<h2 id="오류">오류</h2>
+<p>프로그램을 실행하다 보면 특정 원인으로 비정상적인 동작을 일으키며 프로그램이 종료되는 현상이 있는데 이때 우리는 프로그램에 오류가 발생했다고 한다</p>
+
+<p>오류의 종류는 우리가 컴파일할때 발생할 수 있는 컴파일 오류와 실행 중 발생되는 런타임 오류 두 종류가 있다. 컴파일 오류는 잡기 쉽지만, 런타임 오류는 잡기가 까다롭다.</p>
+
+<p>자바에서는 런타임 오류를 에러와 예외 두 종류로 보고 있다.</p>
+
+<p>에러는 프로그램이 코드로 복구될 수 없는 오류를 의미하고 예외는 프로그래머가 직접 예측하여 막을 수 있는 처리가능한 오류라고 보면 된다.</p>
+
+<p>보통 컴파일 시 발생하는 예외의 경우 IDE 사용 시 예외를 처리하라고 표시한다.</p>
+
+<p>하지만 컴파일 시 발견하지 못하는 예외의 경우 런타임 에러라고 하는데 이때는 프로그래머가 직접 예측하여 처리해야 한다.</p>
+
+<p>그리고 그런 예외가 발생했을때 어떤 동작을 처리해야하는지를 예외 처리라고 한다.</p>
+
+<p>오류 예시(어떤 수를 0으로 나눌 경우)</p>
+<pre>
+<code>
+public class ErrorTest {
+    public static void main(String[] args) {
+        int a,b;
+        a=10;
+        b=0;
+
+        int c=a/b;
+        System.out.println(c);
+    }
+}
+</code>
+</pre>
+<p>출력 :</p>
+<pre>
+<code>
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+	at test.ErrorTest.main(ErrorTest.java:9)
+</code>
+</pre>
+
+<h2 id="try-catch">try, catch</h2>
+<p>예외가 발생했을 때 이를 처리하거나 메소드를 호출한 곳으로 던진다</p>
+
+<p>*모든 예외는 Exception이라는 클래스를 상속받는다</p>
+
+<p>예시 :</p>
+<pre>
+<code>
+public static void main(String[] ar){
+	int a,b;
+	a=10;
+	b=0;
+	try {
+		int c=a/b;
+		System.out.println(c);	//예외발생으로 실행 불가한 코드
+	}catch(ArithmeticException e) { //ArithmeticException이 발생했다면
+		System.out.println("ArithmeticException 발생");
+		System.out.println("0으로 나눌 수는 없습니다");
+		e.printStackTrace(); //어느 부분에서 예외가 발생했는지 알려주는 추적로그
+	}finally { //어떤 예외가 발생하던 말던 무조건 실행
+		System.out.println("finally 실행");
+	}
+}
+</code>
+</pre>
+<p>출력 :</p>
+<pre>
+<code>
+ArithmeticException 발생
+0으로 나눌 수는 없습니다
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+	at test.ErrorTest.main(ErrorTest.java:9)
+finally 실행
+</code>
+</pre>
+<h2 id="throws">throws</h2>
+<p>메소드를 호출한 곳으로 예외 처리를 떠넘기는 것</p>
+
+<p>예시 :</p>
+<pre>
+<code>
+public class ErrorTest {
+    public static void divide(int a,int b) throws ArithmeticException {
+        if(b==0) throw new ArithmeticException("안 돼"); //devide()를 호출한 main에서 처리
+        int c=a/b;
+        System.out.println(c);
+    }
+    public static void main(String[] ar){
+        int a=10;
+        int b=0;
+
+        try {
+            divide(a,b);
+        }catch(ArithmeticException e) {
+            e.getMessage(); //Exception 생성자 중에서 메시지를 받는 생성자가 있는데, 메시지를 볼 때 이용
+            e.printStackTrace();
+        }
+    }
+}
+</code>
+</pre>
+<p>출력 :</p>
+<pre>
+<code>
+java.lang.ArithmeticException: 안 돼
+	at test.ErrorTest.divide(ErrorTest.java:5)
+	at test.ErrorTest.main(ErrorTest.java:14)
+</code>
+</pre>
+<h2 id="예외">예외</h2>
+
+<p>자바의 예외에는 CheckedException과 UncheckedException이 있다</p>
+
+<p><img src="https://www.nextree.co.kr/content/images/2021/01/exception-table.png" alt="image" /></p>
+
+<p>CheckedException과 UncheckedException의 가장 명확한 구분 기준은 꼭 처리를 해야 하느냐다. CheckedException이 발생할 가능성이 있는 메소드라면 반드시 로직을 try/catch나 throw를 써야 한다. 반면 UncheckedException의 경우 명시적인 예외처리를 하지 않아도 된다. 이 예외는 피할 수 있지만 개발자가 부주의해서 발생하는 경우가 대부분이고, 미리 예측하지 못했던 상황에서 발생하는 예외가 아니기 때문에 굳이 로직으로 처리할 필요가 없도록 만들어져 있다</p>
+
+<p>또한 예외를 확인할 수 있는 시점에서도 구분할 수 있는데 일반적으로 컴파일 단계에서 명확하게 Exception 체크가 가능한 것을 CheckedException이라 하고, 실행 과정 중 어떠한 특정 논리에 의해 발견되는 Exception을 UncheckedException이라고 한다. 따라서 컴파일 단계에서 확인할 수 없는 예외라 하여 UncheckedException이고, 실행 과정 중 발견된다고 하여 RuntimeException이라 한다.</p>]]></content><author><name>thekimgyumin</name></author><category term="JAVA" /><category term="JAVA" /><summary type="html"><![CDATA[오류 프로그램을 실행하다 보면 특정 원인으로 비정상적인 동작을 일으키며 프로그램이 종료되는 현상이 있는데 이때 우리는 프로그램에 오류가 발생했다고 한다]]></summary></entry><entry><title type="html">ArrayList</title><link href="https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/03/13/ArrayList.html" rel="alternate" type="text/html" title="ArrayList" /><published>2022-03-13T00:00:00+00:00</published><updated>2022-03-13T00:00:00+00:00</updated><id>https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/03/13/ArrayList</id><content type="html" xml:base="https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/03/13/ArrayList.html"><![CDATA[<h2 id="arraylist란">ArrayList란</h2>
+<p>일반 배열과 동일하게 연속된 메모리 공간을 사용하며 인덱스는 0부터 시작한다. 하지만 배열이 크기가 고정인 반면 ArrayList는 크기가 가변적으로 변한다.</p>
+
+<p>내부적으로 저장이 가능한 메모리 용량이 있으며 현재 사용 중인 공간의 크기가 있다. 만약 현재 가용량 이상을 저장하려고 할 때 더 큰 공간의 메모리를 새롭게 할당한다.</p>
+
+<h3 id="생성">생성</h3>
+<pre>
+<code>
+import java.util.ArrayList;
+
+public class ArrayListTest {
+    public static void main(String[] args) {
+        ArrayList<Integer> integers1 = new ArrayList<Integer>(); // &lt;&gt; 부분에 타입 지정(생략 가능)
+        ArrayList<Integer> integers2 = new ArrayList&lt;&gt;(10); // ()에 초기 용량 설정(생략 가능)
+        ArrayList<Integer> integers3 = new ArrayList&lt;&gt;(integers1); // 다른 Collection값으로 초기화
+        ArrayList<Integer> integers4 = new ArrayList&lt;&gt;(Arrays.asList(1, 2, 3, 4, 5)); // Arrays.asList()
+    }
+}
+&lt;/code&gt;
+&lt;/pre&gt;
+Set이나 다른 ArrayList를 전달하면 해당 Collections의 값들로 초기화된다.
+
+가변 인자를 전달받는 Arrays.asList()를 사용하면 기본 값들로 생성 가능하다.
+
+### ArrayList 엘레멘트 추가/변경
+ArrayList를 생성한 후 add() 메소드로 엘레멘트를 추가할 수 있다.
+
+또한 set() 메소드로 기존에 추가된 값을 변경하는 것도 가능하다.
+<pre>
+<code>
+import java.util.ArrayList;
+
+public class ArrayListTest {
+    public static void main(String[] args) {
+        ArrayList<String> colors = new ArrayList&lt;&gt;();
+        // add() 메소드
+        colors.add("Black");
+        colors.add("White");
+        colors.add(0, "Green");
+        colors.add("Red");
+
+        // set() 메소드
+        colors.set(0, "Blue");
+
+        System.out.println(colors);
+    }
+}
+&lt;/code&gt;
+&lt;/pre&gt;
+출력값 : Blue Black White Red
+
+add()는 기본적으로 리스트의 가장 끝에 값을 추가한다.
+
+별도로 인덱스를 지정하면 해당 인덱스에 값이 추가되고 그 인덱스부터의 값들이 1 칸씩 밀린다.
+
+### ArrayList 엘레멘트 삭제
+추가했던 값을 삭제할 때는 remove() 메소드를 호출한다.
+<pre>
+<code>
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class ArrayListTest {
+    public static void main(String[] args) {
+        ArrayList<String> colors = new ArrayList&lt;&gt;(Arrays.asList("Black", "White", "Green", "Red"));
+        String removedColor = colors.remove(0);
+        System.out.println("Removed color is " + removedColor);
+
+        colors.remove("White");
+        System.out.println(colors);
+
+        colors.clear();
+        colors.add(Blue)
+        System.out.println(colors);
+    }
+}
+&lt;/code&gt;
+&lt;/pre&gt;
+출력값 : 
+
+Removed color is Black
+
+Green Red
+
+Blue
+
+삭제할 때는 엘레멘트의 인덱스를 입력하거나 엘레멘트를 직접 입력할 수 있다.
+
+인덱스를 통해 삭제할 경우 삭제되는 엘레멘트를 리턴받을 수 있다.
+
+값을 지움과 동시에 해당 값으로 별도의 작업이 필요한 경우 리턴을 받아서 사용하면 된다.
+
+ArrayList 안의 내용을 전체 삭제할 때는 clear()를 호출하면 된다.
+
+### ArrayList 전체 값 확인
+ArrayList의 모든 값들을 순회해서 출력하고 싶은 경우 다양한 방법을 사용할 수 있다.
+<pre>
+<code>
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.ListIterator;
+
+public class ArrayListTest {
+    public static void main(String[] args) {
+        ArrayList<String> colors = new ArrayList&lt;&gt;(Arrays.asList("Black", "White", "Green", "Red"));
+        // for-each 활용
+        for (String color : colors) {
+            System.out.print(color + "  ");
+        }
+        System.out.println();
+
+        // for문 활용
+        for (int i = 0; i &lt; colors.size(); ++i) {
+            System.out.print(colors.get(i) + "  ");
+        }
+        System.out.println();
+
+        // iterator 활용
+        Iterator<String> iterator = colors.iterator();
+        while (iterator.hasNext()) {
+            System.out.print(iterator.next() + "  ");
+        }
+        System.out.println();
+
+        // listIterator 활용
+        ListIterator<String> listIterator = colors.listIterator(colors.size());
+        while (listIterator.hasPrevious()) {
+            System.out.print(listIterator.previous() + "  ");
+        }
+        System.out.println();
+    }
+}
+&lt;/code&gt;
+&lt;/pre&gt;
+출력값 : 
+Black White Green Red
+Black White Green Red
+Black White Green Red
+Red Green White Black
+
+listIterator의 경우 생성 시 ArrayList의 크기를 입력해주고 역방향으로 출력할 수 있다.
+
+그래서 역순서로 출력이 되는 것을 확인할 수 있다.
+
+### 값 존재 유무 확인
+ArrayList의 안에 값이 존재하는지 존재한다면 어느 위치에 존재하는지 알고 싶은 경우가 있다.
+
+먼저 값이 존재하는지만 알고 싶은 경우 contains()를 사용한다.
+
+값이 존재할 때 어느 위치에 존재하는지 알고 싶은 경우 indexOf()를 사용할 수 있다.
+<pre>
+<code>
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class ArrayListTest {
+    public static void main(String[] args) {
+        ArrayList<String> colors = new ArrayList&lt;&gt;(Arrays.asList("Black", "White", "Green", "Red"));
+        boolean contains = colors.contains("Black");
+        System.out.println(contains);
+
+        int index = colors.indexOf("Blue");
+        System.out.println(index);
+
+        index = colors.indexOf("Red");
+        System.out.println(index);
+    }
+}
+&lt;/code&gt;
+&lt;/pre&gt;
+출력 : 
+
+true
+
+-1
+
+3
+
+contains()는 값이 있는 경우 true를, 값이 없는 경우 false를 리턴한다.
+
+indexOf()는 값이 존재하는 경우 해당 엘레멘트의 인덱스를 리턴한다.
+
+값이 존재하지 않을 경우 -1을 리턴하기 때문에 별도로 처리가 가능하다.
+</String></code></pre></String></String></String></code></pre></String></code></pre></String></code></pre></Integer></Integer></Integer></Integer></Integer></code></pre>]]></content><author><name>thekimgyumin</name></author><category term="JAVA" /><category term="JAVA" /><summary type="html"><![CDATA[ArrayList란 일반 배열과 동일하게 연속된 메모리 공간을 사용하며 인덱스는 0부터 시작한다. 하지만 배열이 크기가 고정인 반면 ArrayList는 크기가 가변적으로 변한다.]]></summary></entry><entry><title type="html">map</title><link href="https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/03/13/map.html" rel="alternate" type="text/html" title="map" /><published>2022-03-13T00:00:00+00:00</published><updated>2022-03-13T00:00:00+00:00</updated><id>https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/03/13/map</id><content type="html" xml:base="https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/03/13/map.html"><![CDATA[<h2 id="map이란">map이란</h2>
+<p>값 두개(key, velue)를 한 쌍으로 갖는 자료형, 리스트나 배열처럼 순차적으로 해당 요소 값을 구하지 않고 key 값을 통해 value 값을 얻는다</p>
+
+<h2 id="hashmap">HashMap</h2>
+
+<h3 id="put">put</h3>
+<pre>
+<code>
+import java.util.HashMap;
+
+public class Sample {
+    public static void main(String[] args) {
+        HashMap&lt;String, String&gt; map = new HashMap&lt;&gt;();
+        map.put("apple", "사과");
+        map.put("banana", "바나나");
+    }
+}
+</code>
+</pre>
+<p>이와같이 put 메소드를 이용해 key와 value에 값을 넣는다</p>
+
+<h3 id="get">get</h3>
+<pre>
+<code>
+import java.util.HashMap;
+
+public class Sample {
+    public static void main(String[] args) {
+        HashMap&lt;String, String&gt; map = new HashMap&lt;&gt;();
+        map.put("people", "사람");
+        map.put("computer", "컴퓨터");
+        System.out.println(map.get("people"));  // "사람" 출력
+    }
+}
+</code>
+</pre>
+<p>이와같이 get 메소드를 이용해 key 값을 입력하면 value 값을 출력한다
+*이때 key에 해당하는 값이 없으면 null이 출력된다</p>
+
+<h3 id="containskey">containsKey</h3>
+<p>containsKey 메소드는 map에 해당 key가 있는지 조사하여 그 결과값을 리턴한다</p>
+<pre>
+<code>
+public class Sample {
+    public static void main(String[] args) {
+        HashMap&lt;String, String&gt; map = new HashMap&lt;&gt;();
+        map.put("korea", "한국");
+        map.put("canada", "캐나다");
+        System.out.println(map.containsKey("korea"));  // true 출력
+    }
+}
+</code>
+</pre>
+
+<h3 id="remove">remove</h3>
+<p>remove 메소드는 map의 항목을 삭제하는 메소드로 key값에 해당하는 아이템(key, value)을 삭제한 후 그 value값을 리턴한다</p>
+<pre>
+<code>
+public class Sample {
+    public static void main(String[] args) {
+        HashMap&lt;String, String&gt; map = new HashMap&lt;&gt;();
+        map.put("star", "별");
+        map.put("starcraft", "스타크래프트");
+        System.out.println(map.remove("star"));  // "별" 출력, map에서 star/별 삭제
+    }
+}
+</code>
+</pre>
+
+<h3 id="size">size</h3>
+<p>size 메소드는 map의 갯수를 리턴한다</p>
+<pre>
+<code>
+public class Sample {
+    public static void main(String[] args) {
+        HashMap&lt;String, String&gt; map = new HashMap&lt;&gt;();
+        map.put("light", "빛");
+        map.put("dark", "어둠");
+        System.out.println(map.size());  //2 출력
+    }
+}
+</code>
+</pre>
+
+<h3 id="keyset">keyset</h3>
+<p>keyset은 맵의 모든 key를 모아서 리턴한다</p>
+<pre>
+<code>
+import java.util.HashMap;
+
+public class Sample {
+    public static void main(String[] args) {
+        HashMap&lt;String, String&gt; map = new HashMap&lt;&gt;();
+        map.put("asdf", "ㅁㄴㅇㄹ");
+        map.put("qwer", "ㅂㅈㄷㄱ");
+        System.out.println(map.keySet());  // [qwer, asdf] 출력
+    }
+}
+</code>
+</pre>
+
+<h2 id="linkedhashmap과-treemap">LinkedHashMap과 TreeMap</h2>
+<p>Map의 가장 큰 특징은 순서에 의존하지 않고 key로 value를 가져오는데 있다. 하지만 가끔은 Map에 입력된 순서대로 데이터를 가져오고 싶은 경우도 있고 때로는 입력된 key에 의해 정렬된 데이터를 가져오고 싶을 수도 있을 것이다. 이런경우에는 LinkedHashMap과 TreeMap을 사용하는 것이 좋다.</p>
+<ul>
+  <li>LinkedHashMap은 입력된 순서대로 데이터를 저장하는 특징을 가지고 있다.</li>
+  <li>TreeMap은 입력된 key의 오름차순 순서로 데이터를 저장하는 특징을 가지고 있다.</li>
+</ul>]]></content><author><name>thekimgyumin</name></author><category term="JAVA" /><category term="JAVA" /><summary type="html"><![CDATA[map이란 값 두개(key, velue)를 한 쌍으로 갖는 자료형, 리스트나 배열처럼 순차적으로 해당 요소 값을 구하지 않고 key 값을 통해 value 값을 얻는다]]></summary></entry><entry><title type="html">Linux명령어</title><link href="https://thekimgyumin.github.io//jekyll-theme-yat/2022/02/13/linux%EB%AA%85%EB%A0%B9%EC%96%B4.html" rel="alternate" type="text/html" title="Linux명령어" /><published>2022-02-13T00:00:00+00:00</published><updated>2022-02-13T00:00:00+00:00</updated><id>https://thekimgyumin.github.io//jekyll-theme-yat/2022/02/13/linux%EB%AA%85%EB%A0%B9%EC%96%B4</id><content type="html" xml:base="https://thekimgyumin.github.io//jekyll-theme-yat/2022/02/13/linux%EB%AA%85%EB%A0%B9%EC%96%B4.html"><![CDATA[]]></content><author><name>thekimgyumin</name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">간단한 git 명령어 모음집</title><link href="https://thekimgyumin.github.io//jekyll-theme-yat/git/2022/02/13/%EA%B0%84%EB%8B%A8%ED%95%9C-git-%EB%AA%85%EB%A0%B9%EC%96%B4-%EB%AA%A8%EC%9D%8C%EC%A7%91.html" rel="alternate" type="text/html" title="간단한 git 명령어 모음집" /><published>2022-02-13T00:00:00+00:00</published><updated>2022-02-13T00:00:00+00:00</updated><id>https://thekimgyumin.github.io//jekyll-theme-yat/git/2022/02/13/%EA%B0%84%EB%8B%A8%ED%95%9C%20git%20%EB%AA%85%EB%A0%B9%EC%96%B4%20%EB%AA%A8%EC%9D%8C%EC%A7%91</id><content type="html" xml:base="https://thekimgyumin.github.io//jekyll-theme-yat/git/2022/02/13/%EA%B0%84%EB%8B%A8%ED%95%9C-git-%EB%AA%85%EB%A0%B9%EC%96%B4-%EB%AA%A8%EC%9D%8C%EC%A7%91.html"><![CDATA[<h2 id="근데-git이-뭐임">근데 git이 뭐임?</h2>
+
+<p>git이란 souce 관리를 위한 분산 버전 관리 시스템으로, 초기 용도는 리눅스 커널 개발이었습니다.<br />
+코드를 버전 관리함으로써 배포후 주요 버그를 발생시 빠르게 롤백 하거나 수정된 코드만을 파악해 버그를 빠르게 찾거나 한 프로젝트의 코드를 여러 사람이 함께 작업 할 수 있도록 도와주는 등 많은 이점을 가지고 있습니다.</p>
+
+<h2 id="명령어-목록">명령어 목록</h2>
+
+<h3 id="git-status">git status</h3>
+
+<p>git status 명령어는 Git 프로젝트의 상태를 확인할 수 있는 명령어입니다. 작업 디렉토리와 스테이징 영역의 상태를 확인하기 위해서 사용합니다.</p>
+
+<p>이때 git status에 의하여 인식되지 않은 파일들은 변경 여부에 상관없이 출력이 안됩니다.</p>
+
+<h3 id="git-add">git add</h3>
+
+<p>작업 디렉토리 상의 변경 내용을 스테이징 영역에 추가하기 위해서 사용하는 Git 명령어입니다.</p>
+
+<h3 id="git-commit">git commit</h3>
+
+<p>git은 개발 중인 코드의 이력을 만들 수 있는데 이때 그 변화를 로컬 저장소에 기록하는 명령어입니다</p>
+
+<h3 id="git-push">git push</h3>
+
+<p>원격 저장소에 코드 변경분을 업로드하기 위해서 사용하는 명령어 입니다.</p>
+
+<h2 id="근데-스테이징-영역이-뭐임">근데 스테이징 영역이 뭐임?</h2>
+
+<p>작업 디렉토리와 git 저장소의 변경 이력 사이에 징검다리 역할을 하는 것으로 작업 디렉토리는 아직 커밋할 준비가 안된 변경 내용을 자유롭게 수정할 수 있는 공간인 반면, 스테이징 영역은 커밋할 준비가 된 변경 내용이 Git 저장소에 기록되기 전에 대기하는 장소라고 생각할 수 있습니다.</p>]]></content><author><name>thekimgyumin</name></author><category term="git" /><category term="git" /><category term="command" /><category term="short" /><summary type="html"><![CDATA[근데 git이 뭐임?]]></summary></entry><entry><title type="html">its test but its git</title><link href="https://thekimgyumin.github.io//jekyll-theme-yat/test/2022/02/06/git%EC%98%88%EC%8B%9C.html" rel="alternate" type="text/html" title="its test but its git" /><published>2022-02-06T00:00:00+00:00</published><updated>2022-02-06T00:00:00+00:00</updated><id>https://thekimgyumin.github.io//jekyll-theme-yat/test/2022/02/06/git%EC%98%88%EC%8B%9C</id><content type="html" xml:base="https://thekimgyumin.github.io//jekyll-theme-yat/test/2022/02/06/git%EC%98%88%EC%8B%9C.html"><![CDATA[<p>GIT 예시입니다</p>]]></content><author><name>thekimgyumin</name></author><category term="test" /><category term="test" /><summary type="html"><![CDATA[GIT 예시입니다]]></summary></entry><entry><title type="html">its test</title><link href="https://thekimgyumin.github.io//jekyll-theme-yat/test/2022/02/03/%EC%98%88%EC%8B%9C.html" rel="alternate" type="text/html" title="its test" /><published>2022-02-03T00:00:00+00:00</published><updated>2022-02-03T00:00:00+00:00</updated><id>https://thekimgyumin.github.io//jekyll-theme-yat/test/2022/02/03/%EC%98%88%EC%8B%9C</id><content type="html" xml:base="https://thekimgyumin.github.io//jekyll-theme-yat/test/2022/02/03/%EC%98%88%EC%8B%9C.html"><![CDATA[<p>예시</p>]]></content><author><name>thekimgyumin</name></author><category term="test" /><category term="test" /><summary type="html"><![CDATA[예시]]></summary></entry></feed>
