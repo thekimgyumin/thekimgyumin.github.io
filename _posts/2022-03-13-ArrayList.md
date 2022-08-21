@@ -10,8 +10,7 @@ tags: [JAVA]
 내부적으로 저장이 가능한 메모리 용량이 있으며 현재 사용 중인 공간의 크기가 있다. 만약 현재 가용량 이상을 저장하려고 할 때 더 큰 공간의 메모리를 새롭게 할당한다.
 
 ### 생성
-<pre>
-<code>
+```java
 import java.util.ArrayList;
 
 public class ArrayListTest {
@@ -22,8 +21,7 @@ public class ArrayListTest {
         ArrayList<Integer> integers4 = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5)); // Arrays.asList()
     }
 }
-</code>
-</pre>
+```
 Set이나 다른 ArrayList를 전달하면 해당 Collections의 값들로 초기화된다.
 
 가변 인자를 전달받는 Arrays.asList()를 사용하면 기본 값들로 생성 가능하다.
@@ -32,8 +30,7 @@ Set이나 다른 ArrayList를 전달하면 해당 Collections의 값들로 초�
 ArrayList를 생성한 후 add() 메소드로 엘레멘트를 추가할 수 있다.
 
 또한 set() 메소드로 기존에 추가된 값을 변경하는 것도 가능하다.
-<pre>
-<code>
+```java
 import java.util.ArrayList;
 
 public class ArrayListTest {
@@ -51,8 +48,7 @@ public class ArrayListTest {
         System.out.println(colors);
     }
 }
-</code>
-</pre>
+```
 출력값 : Blue Black White Red
 
 add()는 기본적으로 리스트의 가장 끝에 값을 추가한다.
@@ -61,8 +57,7 @@ add()는 기본적으로 리스트의 가장 끝에 값을 추가한다.
 
 ### ArrayList 엘레멘트 삭제
 추가했던 값을 삭제할 때는 remove() 메소드를 호출한다.
-<pre>
-<code>
+```java
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -80,8 +75,7 @@ public class ArrayListTest {
         System.out.println(colors);
     }
 }
-</code>
-</pre>
+```
 출력값 : 
 
 Removed color is Black
@@ -100,8 +94,7 @@ ArrayList 안의 내용을 전체 삭제할 때는 clear()를 호출하면 된�
 
 ### ArrayList 전체 값 확인
 ArrayList의 모든 값들을 순회해서 출력하고 싶은 경우 다양한 방법을 사용할 수 있다.
-<pre>
-<code>
+```java
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
@@ -137,8 +130,7 @@ public class ArrayListTest {
         System.out.println();
     }
 }
-</code>
-</pre>
+```
 출력값 : 
 Black White Green Red
 Black White Green Red
@@ -155,8 +147,7 @@ ArrayList의 안에 값이 존재하는지 존재한다면 어느 위치에 존�
 먼저 값이 존재하는지만 알고 싶은 경우 contains()를 사용한다.
 
 값이 존재할 때 어느 위치에 존재하는지 알고 싶은 경우 indexOf()를 사용할 수 있다.
-<pre>
-<code>
+```java
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -173,8 +164,7 @@ public class ArrayListTest {
         System.out.println(index);
     }
 }
-</code>
-</pre>
+```
 출력 : 
 
 true
