@@ -28,7 +28,7 @@ Tomcat started on port(s): (포트) (http) with context path ''
 ![결과](/.image/springbootFinish.png)
 
 ## 출력
-1. 실행파일에 다음과 같은 코드를 입력한다  
+우선 실행파일에 다음과 같은 코드를 입력한다  
 ```java
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -40,5 +40,5 @@ public class TestController {
         return "Hello";
     }
 ```
-2. 웹에서 localhost:(포트)/hello로 접속해 다음과 같은 이미지를 볼 수 있다
+그리고 웹에서 localhost:(포트)/hello로 접속해 다음과 같은 이미지를 볼 수 있다
 ![Hello](../.image/springbootHello.png)
