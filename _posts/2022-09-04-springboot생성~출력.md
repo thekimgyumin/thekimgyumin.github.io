@@ -20,9 +20,9 @@ Springboot는 매우 간단하게 프로젝트를 설정할 수 있게 하여 Sp
 1. [Spring initializr](https://start.spring.io/) 사이트로 들어간다
 2. 원하는 대로 프로젝트를 작성(Dependencies 정보는 추후에 추가로 설정이 가능하나 기본적인 정보들은 추가해서 다운로드 하는 것이 좋다)  
 예시)
-![예시](.image/springbootMake.png)
-3. GENERATE 버튼을 눌러 다운로드를 하고 압축을 풀어 개발 툴을 이용해 불러온다
-4. 프로젝트가 열리고 그대로 실행하면 콘솔창에  
+![예시](https://github.com/thekimgyumin/thekimgyumin.github.io/blob/master/.image/springbootMake.png?raw=true)
+1. GENERATE 버튼을 눌러 다운로드를 하고 압축을 풀어 개발 툴을 이용해 불러온다
+2. 프로젝트가 열리고 그대로 실행하면 콘솔창에  
 Tomcat started on port(s): (포트) (http) with context path ''  
 가 보일텐데 이제 웹에서 localhost:(포트)로 접속해 다음과 같은 이미지가 뜨면 성공이다  
 ![결과](https://github.com/thekimgyumin/thekimgyumin.github.io/blob/master/.image/springbootFinish.png?raw=true)
@@ -41,4 +41,4 @@ public class TestController {
     }
 ```
 그리고 웹에서 localhost:(포트)/hello로 접속해 다음과 같은 이미지를 볼 수 있다
-![Hello](../.image/springbootHello.png)
+![Hello](https://github.com/thekimgyumin/thekimgyumin.github.io/blob/master/.image/springbootHello.png?raw=true)
