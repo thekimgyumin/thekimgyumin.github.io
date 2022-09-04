@@ -19,3 +19,4 @@ Springboot는 매우 간단하게 프로젝트를 설정할 수 있게 하여 Sp
 ## 생성
 1. [Spring initializr](https://start.spring.io/) 사이트로 들어간다
 2. 원하는 대로 프로젝트를 작성
+![예시](springboot 생성.png)
