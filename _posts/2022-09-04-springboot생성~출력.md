@@ -25,7 +25,7 @@ Springboot는 매우 간단하게 프로젝트를 설정할 수 있게 하여 Sp
 4. 프로젝트가 열리고 그대로 실행하면 콘솔창에  
 Tomcat started on port(s): (포트) (http) with context path ''  
 가 보일텐데 이제 웹에서 localhost:(포트)로 접속해 다음과 같은 이미지가 뜨면 성공이다  
-![결과](../.image/springbootFinish.png)
+![결과](https://github.com/thekimgyumin/thekimgyumin.github.io/blob/master/.image/springbootFinish.png?raw=true)
 
 ## 출력
 우선 실행파일에 다음과 같은 코드를 입력한다  
