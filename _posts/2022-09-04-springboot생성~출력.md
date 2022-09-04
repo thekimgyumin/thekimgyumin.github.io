@@ -41,4 +41,4 @@ public class TestController {
     }
 ```
 2. 웹에서 localhost:(포트)/hello로 접속해 다음과 같은 이미지를 볼 수 있다
-3. ![Hello](../.image/springbootHello.png)
+![Hello](../.image/springbootHello.png)
