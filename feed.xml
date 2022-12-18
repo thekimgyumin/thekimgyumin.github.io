@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="https://thekimgyumin.github.io//jekyll-theme-yat/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thekimgyumin.github.io//jekyll-theme-yat/" rel="alternate" type="text/html" /><updated>2022-12-18T02:06:35+00:00</updated><id>https://thekimgyumin.github.io//jekyll-theme-yat/feed.xml</id><title type="html">thekim이 하는 대충 코딩 이것저것 블로그</title><subtitle>이 사이트 봐도 도움 안될 가능성 높음</subtitle><author><name>thekimgyumin</name></author><entry><title type="html">Java와 JavaScript</title><link href="https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/12/11/java%EC%99%80-javascript.html" rel="alternate" type="text/html" title="Java와 JavaScript" /><published>2022-12-11T00:00:00+00:00</published><updated>2022-12-11T00:00:00+00:00</updated><id>https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/12/11/java%EC%99%80%20javascript</id><content type="html" xml:base="https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/12/11/java%EC%99%80-javascript.html"><![CDATA[<p>??? : 자바랑 자바스크립트는 똑같은거 아님?
+<img src="https://github.com/thekimgyumin/thekimgyumin.github.io/blob/master/.image/Meme/Gal.jpeg?raw=true" alt="喝" width="450" height="500" /></p>
+
+<p>Java와 JavaScript는 다르며 이는 Java 공식 홈페이지에도 나와 있다.</p>
+
+<h2 id="1-일단-이름부터가-문제가-있음">1. 일단 이름부터가 문제가 있음</h2>
+<p>Java와 JavaScript가 비슷한 이름을 가져 둘이 비슷한 언어라고 생각할 수 있지만 완전히 다른 언어다. 그렇다면 왜 비슷한 이름을 가지게 되었을까?</p>
+
+<p>간단하게 말하자면 Java의 인기에 편승하기 위해서였다. JavaScript라는 이름이 사용된 이유는 Java 개발자들을 타깃으로 하고 있었고 당시에 가벼운 프로그램을 지칭하기 위한 단어로 script가 많이 사용되었는데, 이 가벼운 “script”가 당시에 생긴지 얼마 안 된 웹에서 사용될 것이었기 때문이다. 즉 JavaScript는 당시의 무겁고 잘 알려진 Java를 대체하는 언어로 자리매김하고자 사용된 마케팅 전략이다.</p>
+
+<h2 id="2-다르긴-한데아-암튼-다르다고">2. 다르긴 한데…아 암튼 다르다고</h2>
+
+<h3 id="1-객체지향">1) 객체지향</h3>
+<p>서로 별개의 언어이지만, 아주 기초적인 부분에서는 비슷하다. 두 언어는 모두 객체를 만들고, 객체들이 문맥 안에서 서로 관계를 가지도록 코딩을 해야 한다.
+또한, 두 언어들은 모두 상속, 캡슐화(관련이 있는 변수와 함수를 하나로 묶고 외부에서 쉽게 접근하지 못하도록 은닉), 폴리모피즘(다형성, 하나의 객체가 여러개의 자료형을 가질 수 있음)이라는 기법을 사용하고 있다.</p>
+
+<h3 id="2-실행-환경">2) 실행 환경</h3>
+<p>실행 환경은 큰 차이가 있다. 자바 애플리케이션이나 프로그램은 자바 가상기계(JVM) 위에서 실행되고 JVM 환경을 만들기 위해서는 시스템에 JRE와 JDK를 설치해야 한다.</p>
+
+<p>반면 자바스크립트 웹 애플리케이션의 경우 웹 브라우저 위에 실행되며, 추가적인 환경 설정은 필요하지 않다.</p>
+
+<h3 id="3-컴파일">3) 컴파일</h3>
+<p>이것도 차이가 있는데 자바는 프로그래밍 언어이기 때문에 컴퓨터가 이해할 수 있도록 컴파일이 필요하지만 자바스크립트의 경우 텍스트로 쓰인 코드로 실행될 수 있는 프로그래밍 언어이기 때문에 컴파일을 하지 않는다.</p>
+
+<h3 id="4-사용-범위">4) 사용 범위</h3>
+<p>이러한 차이들 때문에 사용 범위도 다를 수 밖에 없는데, 자바는 거의 모든 환경에서 활용되며 다양한 운영체제에서 실행될 수 있는 독립적인 언어이다. 그러나 자바스크립트는 다양한 웹 브라우저에서 이용되며, 자바스크립트가 실행되려면 HTML, CSS에 의존해야 한다.</p>
+
+<h3 id="5-프로젝트에-어울리는-언어">5) 프로젝트에 어울리는 언어</h3>
+<p>따라서 여러 차이점을 고려하여 적합한 언어를 선택해야 한다. 안드로이드 앱, 빅데이터 분석, 기업용 소프트웨어 등을 개발한다면 자바를 고려하는 것이 좋다. 반면 동적인 싱글 페이지 애플리케이션, 제이쿼리(jQuery), 리액트(React.js), 노드(Node.js) 등을 개발한다면 자바스크립트를 고려하는 것이 좋다</p>
+
+<h2 id="3-정리">3. 정리</h2>
+<p>이와 같이 Java와 JavaScript는 객체지향 언어라는 점에서 조금은 비슷하지만 실행 환경이나 컴파일 등 큰 차이가 있으며 이러한 점을 고려해 프로젝트에 따라 Java와 JavaScript 중 적합한 언어를 쓸 필요가 있다.</p>
+
+<p><br /><br /><br /><br />
+<del>근데 둘다 어려움 수구….</del></p>]]></content><author><name>thekimgyumin</name></author><category term="JAVA" /><category term="JAVA" /><category term="JavaScript" /><summary type="html"><![CDATA[??? : 자바랑 자바스크립트는 똑같은거 아님?]]></summary></entry><entry><title type="html">Springboot 생성~출력</title><link href="https://thekimgyumin.github.io//jekyll-theme-yat/springboot/2022/09/04/springboot%EC%83%9D%EC%84%B1~%EC%B6%9C%EB%A0%A5.html" rel="alternate" type="text/html" title="Springboot 생성~출력" /><published>2022-09-04T00:00:00+00:00</published><updated>2022-09-04T00:00:00+00:00</updated><id>https://thekimgyumin.github.io//jekyll-theme-yat/springboot/2022/09/04/springboot%EC%83%9D%EC%84%B1~%EC%B6%9C%EB%A0%A5</id><content type="html" xml:base="https://thekimgyumin.github.io//jekyll-theme-yat/springboot/2022/09/04/springboot%EC%83%9D%EC%84%B1~%EC%B6%9C%EB%A0%A5.html"><![CDATA[<h2 id="개념">개념</h2>
+<h3 id="spring이란">Spring이란</h3>
+<p>자바 기반의 웹 어플리케이션을 만들 수 있는 프레임워크다</p>
+
+<p>현대 자바 기반의 엔터프라이즈 어플리케이션을 위한 프로그래밍 및 Configuration Model을 제공한다</p>
+<h3 id="springboot란">Springboot란</h3>
+<p>Spring을 더 쉽게 이용하기 위한 도구라 불 수 있다</p>
+
+<p>Spring을 이용하여 개발할 때 이것저것 세팅을 해야 하는 요소가 많아 진입 장벽이 존재해 Spring을 처음 배우려는 사람들을 중도에 그만두게 하는 경우가 많다</p>
+
+<p>Springboot는 매우 간단하게 프로젝트를 설정할 수 있게 하여 Spring 개발을 조금 더 쉽게 만들어주는 역할을 한다</p>
+
+<h2 id="생성">생성</h2>
+<ol>
+  <li><a href="https://start.spring.io/">Spring initializr</a> 사이트로 들어간다</li>
+  <li>원하는 대로 프로젝트를 작성(Dependencies 정보는 추후에 추가로 설정이 가능하나 기본적인 정보들은 추가해서 다운로드 하는 것이 좋다)<br />
+예시)
+<img src="https://github.com/thekimgyumin/thekimgyumin.github.io/blob/master/.image/20220904Springboot/springbootMake.png?raw=true" alt="예시" /></li>
+  <li>GENERATE 버튼을 눌러 다운로드를 하고 압축을 풀어 개발 툴을 이용해 불러온다</li>
+  <li>프로젝트가 열리고 그대로 실행하면 콘솔창에<br />
+Tomcat started on port(s): (포트) (http) with context path ‘’<br />
+가 보일텐데 이제 웹에서 localhost:(포트)로 접속해 다음과 같은 이미지가 뜨면 성공이다<br />
+<img src="https://github.com/thekimgyumin/thekimgyumin.github.io/blob/master/.image/20220904Springboot/springbootFinish.png?raw=true" alt="결과" /></li>
+</ol>
+
+<h2 id="출력">출력</h2>
+<p>우선 실행파일에 다음과 같은 코드를 입력한다</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.GetMapping</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.web.bind.annotation.RestController</span><span class="o">;</span>
+
+<span class="nd">@RestController</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">TestController</span> <span class="o">{</span>
+    <span class="nd">@GetMapping</span><span class="o">(</span><span class="s">"/hello"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">returnHelloString</span><span class="o">(){</span>
+        <span class="k">return</span> <span class="s">"Hello"</span><span class="o">;</span>
+    <span class="o">}</span>
+</code></pre></div></div>
+<p>그리고 웹에서 localhost:(포트)/hello로 접속해 다음과 같은 이미지를 볼 수 있다
+<img src="https://github.com/thekimgyumin/thekimgyumin.github.io/blob/master/.image/20220904Springboot/springbootHello.png?raw=true" alt="Hello" /></p>]]></content><author><name>thekimgyumin</name></author><category term="Springboot" /><category term="JAVA" /><category term="Springboot" /><summary type="html"><![CDATA[개념 Spring이란 자바 기반의 웹 어플리케이션을 만들 수 있는 프레임워크다]]></summary></entry><entry><title type="html">어노테이션</title><link href="https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/07/17/%EC%96%B4%EB%85%B8%ED%85%8C%EC%9D%B4%EC%85%98.html" rel="alternate" type="text/html" title="어노테이션" /><published>2022-07-17T00:00:00+00:00</published><updated>2022-07-17T00:00:00+00:00</updated><id>https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/07/17/%EC%96%B4%EB%85%B8%ED%85%8C%EC%9D%B4%EC%85%98</id><content type="html" xml:base="https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/07/17/%EC%96%B4%EB%85%B8%ED%85%8C%EC%9D%B4%EC%85%98.html"><![CDATA[<h2 id="어노테이션">어노테이션</h2>
+<p>자바 개발을 하다 보면 클래스, 메소드 또는 변수 앞에 @override 같은 @표시를 볼 수 있는데, 이를 어노테이션이라고 한다</p>
+
+<p>이는 JEE5(Java Platform, Enterprise Edition 5)부터 추가된 요소로, 이를 이용해 데이터의 유효성 검사를 쉽게 알 수 있고, 이와 관련된 코드가 깔끔해지게 된다</p>
+
+<p>어노테이션의 용도로는 다양한 목적이 있지만 메타 데이터의 비중이 가장 크다고 할 수 있다.</p>
+
+<h2 id="java에서-기본적으로-제공하는-어노테이션-종류">JAVA에서 기본적으로 제공하는 어노테이션 종류</h2>
+<ol>
+  <li>overridde
+    <ul>
+      <li>선언한 메서드가 오버라이드 되었다는 것을 나타낸다</li>
+      <li>만약 상위(부모) 클래스/인터페이스에서 해당 메서드를 찾을 수 없다면 컴파일 에러를 발생시킨다</li>
+    </ul>
+  </li>
+  <li>@Deprecated
+    <ul>
+      <li>해당 메서드가 더 이상 사용되지 않음을 표시한다</li>
+      <li>만약 사용할 경우 컴파일 경고를 발생시킨다</li>
+    </ul>
+  </li>
+  <li>@SuppressWarnings
+    <ul>
+      <li>선언한 곳의 컴파일 경고를 무사한다</li>
+    </ul>
+  </li>
+  <li>@SafeVarargs
+    <ul>
+      <li>Java 7부터 지원하며, 제네릭 같은 가변인자의 매개변수를 사용할 때의 경고를 무시한다</li>
+    </ul>
+  </li>
+  <li>@Functionallnterface
+    <ul>
+      <li>java 8부터 지원하며, 함수형 인터페이스를 지정하는 어노테이션이다</li>
+      <li>만약 메서드가 존재하지 않거나, 1개 이상의 메서드(default 메서드 제외)가 존재할 경우 컴파일 오류를 발생시킨다</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="구성">구성</h2>
+<p>우선 어노테이션의 구조를 보기 위해 아래의 코드를 참조해 보자</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@target</span><span class="o">(</span><span class="nc">ElementType</span><span class="o">.</span><span class="na">METHOD</span><span class="o">)</span>
+<span class="nd">@Retention</span><span class="o">(</span><span class="nc">RetentionPolicy</span><span class="o">.</span><span class="na">RUNTIME</span><span class="o">)</span>
+<span class="kd">public</span> <span class="nd">@interface</span> <span class="nc">CustomAnnotation</span><span class="o">{</span>
+    <span class="kt">boolean</span> <span class="nf">isCheck</span><span class="o">()</span> <span class="k">default</span> <span class="kc">true</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>먼저 1번, 2번 어노테이션 선언에 쓰인 어노테이션은 메타 어노테이션이라 하며 이를 이용해 커스텀 어노테이션을 작성할 수 있게 된다</p>
+
+<p>작업중…</p>]]></content><author><name>thekimgyumin</name></author><category term="JAVA" /><category term="JAVA" /><summary type="html"><![CDATA[어노테이션 자바 개발을 하다 보면 클래스, 메소드 또는 변수 앞에 @override 같은 @표시를 볼 수 있는데, 이를 어노테이션이라고 한다]]></summary></entry><entry><title type="html">제네릭</title><link href="https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/07/13/%EC%A0%9C%EB%84%A4%EB%A6%AD.html" rel="alternate" type="text/html" title="제네릭" /><published>2022-07-13T00:00:00+00:00</published><updated>2022-07-13T00:00:00+00:00</updated><id>https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/07/13/%EC%A0%9C%EB%84%A4%EB%A6%AD</id><content type="html" xml:base="https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/07/13/%EC%A0%9C%EB%84%A4%EB%A6%AD.html"><![CDATA[<h2 id="제네릭">제네릭</h2>
+<p>타입을 클래스 내부에서 지정하는 것이 아닌 외부에서 사용자에 의해 지정되는 것</p>
+
+<p>특정 타입을 미리 지정해주는 것이 아닌 필요에 의해 지정할 수 있도록 하는 일반 타입</p>
+
+<h3 id="장점">장점</h3>
+<p>잘못된 타입이 들어올 수 있는 것을 컴파일 단계에서 방지할 수 있다</p>
+
+<p>클래스 외부에서 타입을 지정해주기 때문에 따로 타입을 체크하고 변환해줄 필요가 없다(=관리하기 편하다)</p>
+
+<p>비슷한 기능을 지원하는 경우 코드의 재사용성이 높아진다</p>
+<hr />
+<h2 id="사용방법">사용방법</h2>
+<p>보통 제네릭은 아래 표의 타입들이 많이 쓰인다
+|타입|설명|
+|—|—|
+|&lt;T&gt;|Type|
+|&lt;E&gt;|Element|
+|&lt;K&gt;|Key|
+|&lt;V&gt;|Value|
+|&lt;N&gt;|Number|</p>
+
+<h3 id="선언-및-생성-방법">선언 및 생성 방법</h3>
+<h4 id="1-클래스-및-인터페이스-선언">1. 클래스 및 인터페이스 선언</h4>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Classname</span> <span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="o">{...}</span>
+<span class="kd">public</span> <span class="nc">Interface</span> <span class="nc">InterfaceName</span> <span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="o">{...}</span>
+</code></pre></div></div>
+<p>기본적으로 제네릭 클래스나 인터페이스의 경우 위와 같이 선언한다</p>
+
+<p>T 타입은 해당 블럭 {…} 안에서까지 유효하다</p>
+
+<p>또한 여기서 더 나아가 제네릭 타입을 두 개로 둘 수 있다</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Classname</span> <span class="o">&lt;</span><span class="no">T</span><span class="o">,</span> <span class="no">K</span><span class="o">&gt;</span> <span class="o">{...}</span>
+<span class="kd">public</span> <span class="nc">Interface</span> <span class="nc">InterfaceName</span> <span class="o">&lt;</span><span class="no">T</span><span class="o">,</span> <span class="no">K</span><span class="o">&gt;</span> <span class="o">{...}</span>
+</code></pre></div></div>
+<p>이렇듯 데이터 타입을 외부로부터 지정할 수 있도록 할 수 있다</p>
+
+<p>이렇게 생성된 제네릭 클래스를 사용하려면 객체를 생성해야 하는데 이때 구체적인 타입을 명시해야 한다</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ClassName</span> <span class="o">&lt;</span><span class="no">T</span><span class="o">,</span> <span class="no">K</span><span class="o">&gt;</span> <span class="o">{...}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">ClassName</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ClassName</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">Integer</span><span class="o">&gt;();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>위 예시대로라면 T는 String가 되고, K는 Integer가 된다</p>
+
+<p>이때 주의해야 할 점은 타입 파라미터로 명시할 수 있는 것은 참조 타입 밖에 올 수 없다. 즉 int, double, char 같은 primitive type은 올 수 없다는 것이다. 그래서 int형 double형 등 primitive type의 경우 Integer, Double 같은 Wrapper Type으로 쓰는 이유가 위와 같은 이유다</p>
+
+<h4 id="2-제네릭-클래스">2. 제네릭 클래스</h4>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//제네릭 클래스</span>
+<span class="kd">class</span> <span class="nc">ClassName</span><span class="o">&lt;</span><span class="no">E</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="no">E</span> <span class="n">element</span><span class="o">;</span>  <span class="c1">// 제네릭 타입 변수</span>
+    <span class="kt">void</span> <span class="nf">set</span> <span class="o">(</span><span class="no">E</span> <span class="n">element</span><span class="o">)</span> <span class="o">{</span>   <span class="c1">// 제네릭 파라미터 메소드</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">element</span> <span class="o">=</span> <span class="n">element</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="no">E</span> <span class="nf">get</span><span class="o">()</span> <span class="o">{</span>   <span class="c1">// 제네릭 타입 변환 메소드</span>
+        <span class="k">return</span> <span class="n">element</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+        <span class="nc">ClassName</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ClassName</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;();</span>
+        <span class="nc">ClassName</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ClassName</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;();</span>
+
+        <span class="n">a</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">"10"</span><span class="o">);</span>
+        <span class="n">b</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="mi">10</span><span class="o">);</span>
+
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"a data : "</span> <span class="o">+</span> <span class="n">a</span><span class="o">.</span><span class="na">get</span><span class="o">());</span>
+        <span class="c1">// 반환한 변수의 타입 출력</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"a E Type : "</span> <span class="o">+</span> <span class="n">a</span><span class="o">.</span><span class="na">get</span><span class="o">().</span><span class="na">getClass</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span>
+
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"b data : "</span> <span class="o">+</span> <span class="n">b</span><span class="o">.</span><span class="na">get</span><span class="o">());</span>
+        <span class="c1">// 반환된 변수의 타입 출력</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"b E Type : "</span> <span class="o">+</span> <span class="n">b</span><span class="o">.</span><span class="na">get</span><span class="o">().</span><span class="na">getClass</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>보면 ClassName이란 객체를 생성할 때 &lt;&gt; 안에 타입 파라미터를 지정한다.</p>
+
+<p>그러면 a객체의 ClassName의 E 제네릭 타입은 String으로 모두 변환된다.</p>
+
+<p>반대로 b객체의 ClassName의 E 제네릭 타입은 Integer으로 모두 변환된다.</p>
+
+<p>실제로 위 코드를 실행시키면 다음과 같이 출력된다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>first data : 10
+K type : java.lang.String
+Second data : 10
+V type : java.lang.Integer
+</code></pre></div></div>
+<p>이렇게 외부 클래스에서 제네릭 클래스를 생성할 때 &lt;&gt; 괄호 안에 타입을 파라미터로 지정해 주는 것이 제네릭 프로그래밍이다.</p>
+
+<h4 id="3-제네릭-메소드">3. 제네릭 메소드</h4>
+
+<p>위 과정까지는 클래스 이름 옆에 예시로 <E>라는 제네릭 타입을 붙여 해당 클래스 내에서 사용할 수 있는 E타입으로 일반화를 했다. 그러나 그 외에 별도로 한정한 제네릭도 사용할 수 있다.</E></p>
+
+<p>일반적으로 선언 방법은 다음과 같다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public &lt;T&gt; T genericMethod(T o) {   // 제네릭 메소드
+    ...
+}
+[접근 제어자] &lt;제네릭 타입&gt; [반환 타입] [메소드명] ([제네릭 타입] [파라미터]) {
+    // 텍스트
+}
+</code></pre></div></div>
+<p>클래스와는 다르게 반환 타입 이전에 &lt;&gt; 제네릭 타입을 선언한다.</p>
+
+<p>위에서 다룬 제네릭 클래스에서 활용해보도록 하자.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 제네릭 클래스</span>
+<span class="kd">class</span> <span class="nc">ClassName</span><span class="o">&lt;</span><span class="no">E</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="no">E</span> <span class="n">element</span><span class="o">;</span>  <span class="c1">// 제네릭 타입 변수</span>
+    <span class="kt">void</span> <span class="nf">set</span><span class="o">(</span><span class="no">E</span> <span class="n">element</span><span class="o">)</span> <span class="o">{</span>   <span class="c1">// 제네릭 파라미터 메소드</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">element</span> <span class="o">=</span> <span class="n">element</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="no">E</span> <span class="nf">get</span><span class="o">()</span> <span class="o">{</span>   <span class="c1">// 제네릭 타입 반환 메소드</span>
+        <span class="k">return</span> <span class="n">element</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="no">T</span> <span class="nf">genericMethod</span><span class="o">(</span><span class="no">T</span> <span class="n">o</span><span class="o">)</span> <span class="o">{</span> <span class="c1">// 제네릭 메소드</span>
+        <span class="k">return</span> <span class="n">o</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">ClassName</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ClassName</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;();</span>
+        <span class="nc">ClassName</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ClassName</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;();</span>
+
+        <span class="n">a</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">"10"</span><span class="o">);</span>
+        <span class="n">b</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="mi">10</span><span class="o">);</span>
+
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"a data : "</span> <span class="o">+</span> <span class="n">a</span><span class="o">.</span><span class="na">get</span><span class="o">());</span>
+        <span class="c1">// 반환된 변수의 타입 출력</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"a E Type : "</span> <span class="o">+</span> <span class="n">a</span><span class="o">.</span><span class="na">get</span><span class="o">().</span><span class="na">getClass</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span>
+
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"b data : "</span> <span class="o">+</span> <span class="n">b</span><span class="o">.</span><span class="na">get</span><span class="o">());</span>
+        <span class="c1">// 반환된 변수의 타입 출력</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"B E Type :"</span> <span class="o">+</span> <span class="n">b</span><span class="o">.</span><span class="na">get</span><span class="o">().</span><span class="na">getClass</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span>
+        <span class="nc">Sysetm</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+
+        <span class="c1">// 제네릭 메소드 Integer</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"&lt;T&gt; returnType : "</span> <span class="o">+</span> <span class="n">a</span><span class="o">.</span><span class="na">genericMethod</span><span class="o">(</span><span class="mi">3</span><span class="o">).</span><span class="na">getClass</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span>
+
+        <span class="c1">// 제네릭 메소드 String</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"&lt;T&gt; returnType : "</span> <span class="o">+</span> <span class="n">a</span><span class="o">.</span><span class="na">genericMethod</span><span class="o">(</span><span class="s">"ABCD"</span><span class="o">).</span><span class="na">getClass</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span>
+
+        <span class="c1">// 제네릭 메소드 ClassName b</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"&lt;T&gt; returnType : "</span> <span class="o">+</span> <span class="n">a</span><span class="o">.</span><span class="na">genericMethod</span><span class="o">(</span><span class="n">b</span><span class="o">).</span><span class="na">getClass</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>보면 ClassName이란 객체를 생성할 때 &lt;&gt; 안에 타입 파라미터를 지정한다.</p>
+
+<p>그러면 a객체의 ClassName의 E 제네릭 타입은 모두 String으로 변환된다.</p>
+
+<p>반대로 b객체의 ClassName의 E 제네릭 타입은 모두 Integer으로 변환된다.</p>
+
+<p>genericMethod()는 파라미터 타입에 따라 T 타입이 결정된다.</p>
+
+<p>실제로 위 코드를 실행시키면 다음과 같이 출력된다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a data : 10
+a E type : java.lang.String
+
+b data : 10
+b E type : java.lang.Integer
+
+&lt;T&gt; returnType : java.lang.Integer
+&lt;T&gt; returnType : java.lang.String
+&lt;T&gt; returnType : ClassName
+</code></pre></div></div>
+<p>즉 클래스에서 지정한 제네릭 유형과 별도로 메소드에서 독립적으로 제네릭 유형을 선언하여 쓸 수 있다.</p>
+
+<p>이렇게 위와 같은 방식이 필요한 이유는 ‘정적 메소드로 선언할 때 필요’하기 때문이다.</p>
+
+<p>생각해보자. 앞서 제네릭은 유형을 외부에서 지정해 준다고 했다. 즉 해당 클래스 객체가 인스턴스화 했을 때, 쉽게 말해 new 생성자로 클래스를 생성하고 &lt;&gt; 괄호 사이에 파라미터로 넘겨준 타입으로 지정이 된다는 뜻이다.</p>
+
+<p>하지만 static은 정적이라는 뜻이다. static 변수, static 함수 등 static이 붙은 것들은 기본적으로 프로그램 실행 시 메모리에 이미 올라가 있다.</p>
+
+<p>이 말은 객체 생성을 통해 접근할 필요 없이 이미 메모리에 올라가 있기 때문에 클래스 이름을 통해 바로 쓸 수 있다는 것이다.</p>
+
+<p>근데, 거꾸로 생각해 보면 static 메소드는 객체가 생성되기 전에 이미 메모리에 올라가는데 타입을 어디서 얻어올 수 있을까?</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">ClassName</span><span class="o">&lt;</span><span class="no">E</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="cm">/*
+    클래스와 같은 E 타입이더라도
+    static 메소드는 객체가 생성되기 이전 시점에
+    메모리에 먼저 올라가기 때문에
+    E 유형을 클래스로부터 얻어올 방법이 없다.
+    */</span>
+    <span class="kd">static</span> <span class="no">E</span> <span class="nf">genericMethod</span><span class="o">(</span><span class="no">E</span> <span class="n">o</span><span class="o">)</span> <span class="o">{</span>   <span class="c1">// error!</span>
+        <span class="k">return</span> <span class="n">o</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// ClassName 객체가 생성되기 전에 접근할 수 있으나 유형을 지정할 방법이 없어 에러남</span>
+        <span class="nc">ClassName</span><span class="o">.</span><span class="na">getnerMethod</span><span class="o">(</span><span class="mi">3</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>위 내용을 보면 이해가 갈 것이다.</p>
+
+<p>그렇기 때문에 제네릭이 사용되는 메소드를 정적 메소드로 두고 싶은 경우 제네릭 클래스와 별도로 독립적인 제네릭이 사용되어야 한다는 것이다.</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 제네릭 클래스</span>
+<span class="kd">class</span> <span class="nc">ClassName</span><span class="o">&lt;</span><span class="no">E</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="no">E</span> <span class="n">element</span><span class="o">;</span> <span class="c1">// 제네릭 타입 변수</span>
+    <span class="kt">void</span> <span class="nf">set</span><span class="o">(</span><span class="no">E</span> <span class="n">element</span><span class="o">)</span> <span class="o">{</span> <span class="c1">// 제네릭 파라미터 메소드</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">element</span> <span class="o">=</span> <span class="n">element</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="no">E</span> <span class="nf">get</span><span class="o">()</span> <span class="o">{</span> <span class="c1">// 제네릭 타입 반환 메소드</span>
+        <span class="k">return</span> <span class="n">element</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="c1">// 아래 메소드의 E타입은 제네릭 클래스의 E타입과 다른 독립적인 타입이다.</span>
+    <span class="kd">static</span> <span class="o">&lt;</span><span class="no">E</span><span class="o">&gt;</span> <span class="no">E</span> <span class="nf">genericMethod1</span><span class="o">(</span><span class="no">E</span> <span class="n">o</span><span class="o">)</span> <span class="o">{</span> <span class="c1">// 제네릭 메소드</span>
+        <span class="k">return</span> <span class="n">o</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kd">static</span> <span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="no">T</span> <span class="nf">genericMethod2</span><span class="o">(</span><span class="no">T</span> <span class="n">o</span><span class="o">)</span> <span class="o">{</span> <span class="c1">// 제네릭 메소드</span>
+        <span class="k">return</span> <span class="n">o</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">ClassName</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ClassName</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;();</span>
+        <span class="nc">ClassName</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ClassName</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;();</span>
+
+        <span class="n">a</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">"10"</span><span class="o">);</span>
+        <span class="n">b</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="mi">10</span><span class="o">);</span>
+
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"a data : "</span> <span class="o">+</span> <span class="n">a</span><span class="o">.</span><span class="na">get</span><span class="o">());</span>
+        <span class="c1">// 반환된 변수의 타입 출력</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"a E type : "</span> <span class="o">+</span> <span class="n">a</span><span class="o">.</span><span class="na">get</span><span class="o">().</span><span class="na">getClass</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span>
+
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"b data : "</span> <span class="o">+</span> <span class="n">b</span><span class="o">.</span><span class="na">get</span><span class="o">());</span>
+        <span class="c1">// 반환된 변수의 타입 출력</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"b E type : "</span> <span class="o">+</span> <span class="n">b</span><span class="o">.</span><span class="na">get</span><span class="o">().</span><span class="na">getClass</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+
+        <span class="c1">// 제네릭 메소드1 Integer</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"&lt;E&gt; returnType : "</span> <span class="o">+</span> <span class="nc">ClassName</span><span class="o">.</span><span class="na">genericMethod1</span><span class="o">(</span><span class="mi">3</span><span class="o">).</span><span class="na">getClass</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span>
+
+        <span class="c1">// 제네릭 메소드1 String</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"&lt;E&gt; returnType : "</span> <span class="o">+</span> <span class="nc">ClassName</span><span class="o">.</span><span class="na">genericMethod1</span><span class="o">(</span><span class="s">"ABCD"</span><span class="o">).</span><span class="na">getClass</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span>
+
+        <span class="c1">// 제네릭 메소드2 ClassName a</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"&lt;T&gt; returnType : "</span> <span class="o">+</span> <span class="nc">ClassName</span><span class="o">.</span><span class="na">genericMethod1</span><span class="o">(</span><span class="n">a</span><span class="o">).</span><span class="na">getClass</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span>
+
+        <span class="c1">// 제네릭 메소드2 Double</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"&lt;T&gt; returnType : "</span> <span class="o">+</span> <span class="nc">ClassName</span><span class="o">.</span><span class="na">genericMethod1</span><span class="o">(</span><span class="mf">3.0</span><span class="o">).</span><span class="na">getClass</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>결과는 다음과 같다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a data : 10
+a E type : java.lang.String
+
+b data : 10
+b E type : java.lang.Integer
+
+&lt;E&gt; returnType : java.lang.Integer
+&lt;E&gt; returnType : java.lang.String
+&lt;T&gt; returnType : ClassName
+&lt;T&gt; returnType : java.lang.Double
+</code></pre></div></div>
+<p>보다시피 제네릭 메소드는 제네릭 클래스 타입과 별도로 지정된다는 것을 볼 수 있다.</p>]]></content><author><name>thekimgyumin</name></author><category term="JAVA" /><category term="JAVA" /><summary type="html"><![CDATA[제네릭 타입을 클래스 내부에서 지정하는 것이 아닌 외부에서 사용자에 의해 지정되는 것]]></summary></entry><entry><title type="html">자바 자료형</title><link href="https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/05/01/%EC%9E%90%EB%B0%94-%EC%9E%90%EB%A3%8C%ED%98%95.html" rel="alternate" type="text/html" title="자바 자료형" /><published>2022-05-01T00:00:00+00:00</published><updated>2022-05-01T00:00:00+00:00</updated><id>https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/05/01/%EC%9E%90%EB%B0%94%20%EC%9E%90%EB%A3%8C%ED%98%95</id><content type="html" xml:base="https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/05/01/%EC%9E%90%EB%B0%94-%EC%9E%90%EB%A3%8C%ED%98%95.html"><![CDATA[<p>자바의 자료형에는 기본형(Primitive Type)과 참조형(Reference Type)이 있다.</p>
+
+<p>일반적으로 다음과 같이 분류한다
+<img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZ3JhcGggVERcblByaVtQcmltaXRpdmUgVHlwZV1cblByaSAtLT4gQm9vKEJvb2xlYW4gVHlwZSlcblByaSAtLT4gTnVtKE51bWVyaWMgVHlwZSlcbk51bSAtLT4gSW50KEludGVncmFsIFR5cGUpXG5JbnQgLS0-IEludFR5cGUoXCJJbnRlZ2VyIFR5cGUoc2hvcnQsIGludCwgbG9uZylcIilcbkludCAtLT4gRmxvYXQoXCJGbG9hdGluZyBQb2ludCBUeXBlKGZsb2F0LCBkb3VibGUpXCIpXG5OdW0gLS0-IENoYXJUeXBlKFwiQ2hhcmFjdGVyIFR5cGUoY2hhcilcIikiLCJtZXJtYWlkIjpudWxsfQ" /></p>]]></content><author><name>thekimgyumin</name></author><category term="JAVA" /><category term="JAVA" /><summary type="html"><![CDATA[자바의 자료형에는 기본형(Primitive Type)과 참조형(Reference Type)이 있다.]]></summary></entry><entry><title type="html">예외처리</title><link href="https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/03/20/%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC.html" rel="alternate" type="text/html" title="예외처리" /><published>2022-03-20T00:00:00+00:00</published><updated>2022-03-20T00:00:00+00:00</updated><id>https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/03/20/%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC</id><content type="html" xml:base="https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/03/20/%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC.html"><![CDATA[<h2 id="오류">오류</h2>
+<p>프로그램을 실행하다 보면 특정 원인으로 비정상적인 동작을 일으키며 프로그램이 종료되는 현상이 있는데 이때 우리는 프로그램에 오류가 발생했다고 한다</p>
+
+<p>오류의 종류는 우리가 컴파일할때 발생할 수 있는 컴파일 오류와 실행 중 발생되는 런타임 오류 두 종류가 있다. 컴파일 오류는 잡기 쉽지만, 런타임 오류는 잡기가 까다롭다.</p>
+
+<p>자바에서는 런타임 오류를 에러와 예외 두 종류로 보고 있다.</p>
+
+<p>에러는 프로그램이 코드로 복구될 수 없는 오류를 의미하고 예외는 프로그래머가 직접 예측하여 막을 수 있는 처리가능한 오류라고 보면 된다.</p>
+
+<p>보통 컴파일 시 발생하는 예외의 경우 IDE 사용 시 예외를 처리하라고 표시한다.</p>
+
+<p>하지만 컴파일 시 발견하지 못하는 예외의 경우 런타임 에러라고 하는데 이때는 프로그래머가 직접 예측하여 처리해야 한다.</p>
+
+<p>그리고 그런 예외가 발생했을때 어떤 동작을 처리해야하는지를 예외 처리라고 한다.</p>
+
+<p>오류 예시(어떤 수를 0으로 나눌 경우)</p>
+<pre>
+<code>
+public class ErrorTest {
+    public static void main(String[] args) {
+        int a,b;
+        a=10;
+        b=0;
+
+        int c=a/b;
+        System.out.println(c);
+    }
+}
+</code>
+</pre>
+<p>출력 :</p>
+<pre>
+<code>
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+	at test.ErrorTest.main(ErrorTest.java:9)
+</code>
+</pre>
+
+<h2 id="try-catch">try, catch</h2>
+<p>예외가 발생했을 때 이를 처리하거나 메소드를 호출한 곳으로 던진다</p>
+
+<p>*모든 예외는 Exception이라는 클래스를 상속받는다</p>
+
+<p>예시 :</p>
+<pre>
+<code>
+public static void main(String[] ar){
+	int a,b;
+	a=10;
+	b=0;
+	try {
+		int c=a/b;
+		System.out.println(c);	//예외발생으로 실행 불가한 코드
+	}catch(ArithmeticException e) { //ArithmeticException이 발생했다면
+		System.out.println("ArithmeticException 발생");
+		System.out.println("0으로 나눌 수는 없습니다");
+		e.printStackTrace(); //어느 부분에서 예외가 발생했는지 알려주는 추적로그
+	}finally { //어떤 예외가 발생하던 말던 무조건 실행
+		System.out.println("finally 실행");
+	}
+}
+</code>
+</pre>
+<p>출력 :</p>
+<pre>
+<code>
+ArithmeticException 발생
+0으로 나눌 수는 없습니다
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+	at test.ErrorTest.main(ErrorTest.java:9)
+finally 실행
+</code>
+</pre>
+<h2 id="throws">throws</h2>
+<p>메소드를 호출한 곳으로 예외 처리를 떠넘기는 것</p>
+
+<p>예시 :</p>
+<pre>
+<code>
+public class ErrorTest {
+    public static void divide(int a,int b) throws ArithmeticException {
+        if(b==0) throw new ArithmeticException("안 돼"); //devide()를 호출한 main에서 처리
+        int c=a/b;
+        System.out.println(c);
+    }
+    public static void main(String[] ar){
+        int a=10;
+        int b=0;
+
+        try {
+            divide(a,b);
+        }catch(ArithmeticException e) {
+            e.getMessage(); //Exception 생성자 중에서 메시지를 받는 생성자가 있는데, 메시지를 볼 때 이용
+            e.printStackTrace();
+        }
+    }
+}
+</code>
+</pre>
+<p>출력 :</p>
+<pre>
+<code>
+java.lang.ArithmeticException: 안 돼
+	at test.ErrorTest.divide(ErrorTest.java:5)
+	at test.ErrorTest.main(ErrorTest.java:14)
+</code>
+</pre>
+<h2 id="예외">예외</h2>
+
+<p>자바의 예외에는 CheckedException과 UncheckedException이 있다</p>
+
+<p><img src="https://www.nextree.co.kr/content/images/2021/01/exception-table.png" alt="image" /></p>
+
+<p>CheckedException과 UncheckedException의 가장 명확한 구분 기준은 꼭 처리를 해야 하느냐다. CheckedException이 발생할 가능성이 있는 메소드라면 반드시 로직을 try/catch나 throw를 써야 한다. 반면 UncheckedException의 경우 명시적인 예외처리를 하지 않아도 된다. 이 예외는 피할 수 있지만 개발자가 부주의해서 발생하는 경우가 대부분이고, 미리 예측하지 못했던 상황에서 발생하는 예외가 아니기 때문에 굳이 로직으로 처리할 필요가 없도록 만들어져 있다</p>
+
+<p>또한 예외를 확인할 수 있는 시점에서도 구분할 수 있는데 일반적으로 컴파일 단계에서 명확하게 Exception 체크가 가능한 것을 CheckedException이라 하고, 실행 과정 중 어떠한 특정 논리에 의해 발견되는 Exception을 UncheckedException이라고 한다. 따라서 컴파일 단계에서 확인할 수 없는 예외라 하여 UncheckedException이고, 실행 과정 중 발견된다고 하여 RuntimeException이라 한다.</p>]]></content><author><name>thekimgyumin</name></author><category term="JAVA" /><category term="JAVA" /><summary type="html"><![CDATA[오류 프로그램을 실행하다 보면 특정 원인으로 비정상적인 동작을 일으키며 프로그램이 종료되는 현상이 있는데 이때 우리는 프로그램에 오류가 발생했다고 한다]]></summary></entry><entry><title type="html">ArrayList</title><link href="https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/03/13/ArrayList.html" rel="alternate" type="text/html" title="ArrayList" /><published>2022-03-13T00:00:00+00:00</published><updated>2022-03-13T00:00:00+00:00</updated><id>https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/03/13/ArrayList</id><content type="html" xml:base="https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/03/13/ArrayList.html"><![CDATA[<h2 id="arraylist란">ArrayList란</h2>
+<p>일반 배열과 동일하게 연속된 메모리 공간을 사용하며 인덱스는 0부터 시작한다. 하지만 배열이 크기가 고정인 반면 ArrayList는 크기가 가변적으로 변한다.</p>
+
+<p>내부적으로 저장이 가능한 메모리 용량이 있으며 현재 사용 중인 공간의 크기가 있다. 만약 현재 가용량 이상을 저장하려고 할 때 더 큰 공간의 메모리를 새롭게 할당한다.</p>
+
+<h3 id="생성">생성</h3>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ArrayListTest</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">integers1</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;();</span> <span class="c1">// &lt;&gt; 부분에 타입 지정(생략 가능)</span>
+        <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">integers2</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;(</span><span class="mi">10</span><span class="o">);</span> <span class="c1">// ()에 초기 용량 설정(생략 가능)</span>
+        <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">integers3</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;(</span><span class="n">integers1</span><span class="o">);</span> <span class="c1">// 다른 Collection값으로 초기화</span>
+        <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">integers4</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;(</span><span class="nc">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">));</span> <span class="c1">// Arrays.asList()</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>Set이나 다른 ArrayList를 전달하면 해당 Collections의 값들로 초기화된다.</p>
+
+<p>가변 인자를 전달받는 Arrays.asList()를 사용하면 기본 값들로 생성 가능하다.</p>
+
+<h3 id="arraylist-엘레멘트-추가변경">ArrayList 엘레멘트 추가/변경</h3>
+<p>ArrayList를 생성한 후 add() 메소드로 엘레멘트를 추가할 수 있다.</p>
+
+<p>또한 set() 메소드로 기존에 추가된 값을 변경하는 것도 가능하다.</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ArrayListTest</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">colors</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
+        <span class="c1">// add() 메소드</span>
+        <span class="n">colors</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"Black"</span><span class="o">);</span>
+        <span class="n">colors</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"White"</span><span class="o">);</span>
+        <span class="n">colors</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="s">"Green"</span><span class="o">);</span>
+        <span class="n">colors</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"Red"</span><span class="o">);</span>
+
+        <span class="c1">// set() 메소드</span>
+        <span class="n">colors</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="s">"Blue"</span><span class="o">);</span>
+
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">colors</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>출력값 : Blue Black White Red</p>
+
+<p>add()는 기본적으로 리스트의 가장 끝에 값을 추가한다.</p>
+
+<p>별도로 인덱스를 지정하면 해당 인덱스에 값이 추가되고 그 인덱스부터의 값들이 1 칸씩 밀린다.</p>
+
+<h3 id="arraylist-엘레멘트-삭제">ArrayList 엘레멘트 삭제</h3>
+<p>추가했던 값을 삭제할 때는 remove() 메소드를 호출한다.</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Arrays</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ArrayListTest</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">colors</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;(</span><span class="nc">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="s">"Black"</span><span class="o">,</span> <span class="s">"White"</span><span class="o">,</span> <span class="s">"Green"</span><span class="o">,</span> <span class="s">"Red"</span><span class="o">));</span>
+        <span class="nc">String</span> <span class="n">removedColor</span> <span class="o">=</span> <span class="n">colors</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Removed color is "</span> <span class="o">+</span> <span class="n">removedColor</span><span class="o">);</span>
+
+        <span class="n">colors</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="s">"White"</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">colors</span><span class="o">);</span>
+
+        <span class="n">colors</span><span class="o">.</span><span class="na">clear</span><span class="o">();</span>
+        <span class="n">colors</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="nc">Blue</span><span class="o">)</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">colors</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>출력값 :</p>
+
+<p>Removed color is Black</p>
+
+<p>Green Red</p>
+
+<p>Blue</p>
+
+<p>삭제할 때는 엘레멘트의 인덱스를 입력하거나 엘레멘트를 직접 입력할 수 있다.</p>
+
+<p>인덱스를 통해 삭제할 경우 삭제되는 엘레멘트를 리턴받을 수 있다.</p>
+
+<p>값을 지움과 동시에 해당 값으로 별도의 작업이 필요한 경우 리턴을 받아서 사용하면 된다.</p>
+
+<p>ArrayList 안의 내용을 전체 삭제할 때는 clear()를 호출하면 된다.</p>
+
+<h3 id="arraylist-전체-값-확인">ArrayList 전체 값 확인</h3>
+<p>ArrayList의 모든 값들을 순회해서 출력하고 싶은 경우 다양한 방법을 사용할 수 있다.</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Arrays</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Iterator</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.ListIterator</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ArrayListTest</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">colors</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;(</span><span class="nc">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="s">"Black"</span><span class="o">,</span> <span class="s">"White"</span><span class="o">,</span> <span class="s">"Green"</span><span class="o">,</span> <span class="s">"Red"</span><span class="o">));</span>
+        <span class="c1">// for-each 활용</span>
+        <span class="k">for</span> <span class="o">(</span><span class="nc">String</span> <span class="n">color</span> <span class="o">:</span> <span class="n">colors</span><span class="o">)</span> <span class="o">{</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">color</span> <span class="o">+</span> <span class="s">"  "</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+
+        <span class="c1">// for문 활용</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">colors</span><span class="o">.</span><span class="na">size</span><span class="o">();</span> <span class="o">++</span><span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">colors</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="o">+</span> <span class="s">"  "</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+
+        <span class="c1">// iterator 활용</span>
+        <span class="nc">Iterator</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">iterator</span> <span class="o">=</span> <span class="n">colors</span><span class="o">.</span><span class="na">iterator</span><span class="o">();</span>
+        <span class="k">while</span> <span class="o">(</span><span class="n">iterator</span><span class="o">.</span><span class="na">hasNext</span><span class="o">())</span> <span class="o">{</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">iterator</span><span class="o">.</span><span class="na">next</span><span class="o">()</span> <span class="o">+</span> <span class="s">"  "</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+
+        <span class="c1">// listIterator 활용</span>
+        <span class="nc">ListIterator</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">listIterator</span> <span class="o">=</span> <span class="n">colors</span><span class="o">.</span><span class="na">listIterator</span><span class="o">(</span><span class="n">colors</span><span class="o">.</span><span class="na">size</span><span class="o">());</span>
+        <span class="k">while</span> <span class="o">(</span><span class="n">listIterator</span><span class="o">.</span><span class="na">hasPrevious</span><span class="o">())</span> <span class="o">{</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">listIterator</span><span class="o">.</span><span class="na">previous</span><span class="o">()</span> <span class="o">+</span> <span class="s">"  "</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>출력값 : 
+Black White Green Red
+Black White Green Red
+Black White Green Red
+Red Green White Black</p>
+
+<p>listIterator의 경우 생성 시 ArrayList의 크기를 입력해주고 역방향으로 출력할 수 있다.</p>
+
+<p>그래서 역순서로 출력이 되는 것을 확인할 수 있다.</p>
+
+<h3 id="값-존재-유무-확인">값 존재 유무 확인</h3>
+<p>ArrayList의 안에 값이 존재하는지 존재한다면 어느 위치에 존재하는지 알고 싶은 경우가 있다.</p>
+
+<p>먼저 값이 존재하는지만 알고 싶은 경우 contains()를 사용한다.</p>
+
+<p>값이 존재할 때 어느 위치에 존재하는지 알고 싶은 경우 indexOf()를 사용할 수 있다.</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Arrays</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ArrayListTest</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">colors</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;(</span><span class="nc">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="s">"Black"</span><span class="o">,</span> <span class="s">"White"</span><span class="o">,</span> <span class="s">"Green"</span><span class="o">,</span> <span class="s">"Red"</span><span class="o">));</span>
+        <span class="kt">boolean</span> <span class="n">contains</span> <span class="o">=</span> <span class="n">colors</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="s">"Black"</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">contains</span><span class="o">);</span>
+
+        <span class="kt">int</span> <span class="n">index</span> <span class="o">=</span> <span class="n">colors</span><span class="o">.</span><span class="na">indexOf</span><span class="o">(</span><span class="s">"Blue"</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">index</span><span class="o">);</span>
+
+        <span class="n">index</span> <span class="o">=</span> <span class="n">colors</span><span class="o">.</span><span class="na">indexOf</span><span class="o">(</span><span class="s">"Red"</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">index</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>출력 :</p>
+
+<p>true</p>
+
+<p>-1</p>
+
+<p>3</p>
+
+<p>contains()는 값이 있는 경우 true를, 값이 없는 경우 false를 리턴한다.</p>
+
+<p>indexOf()는 값이 존재하는 경우 해당 엘레멘트의 인덱스를 리턴한다.</p>
+
+<p>값이 존재하지 않을 경우 -1을 리턴하기 때문에 별도로 처리가 가능하다.</p>]]></content><author><name>thekimgyumin</name></author><category term="JAVA" /><category term="JAVA" /><summary type="html"><![CDATA[ArrayList란 일반 배열과 동일하게 연속된 메모리 공간을 사용하며 인덱스는 0부터 시작한다. 하지만 배열이 크기가 고정인 반면 ArrayList는 크기가 가변적으로 변한다.]]></summary></entry><entry><title type="html">map</title><link href="https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/03/13/map.html" rel="alternate" type="text/html" title="map" /><published>2022-03-13T00:00:00+00:00</published><updated>2022-03-13T00:00:00+00:00</updated><id>https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/03/13/map</id><content type="html" xml:base="https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/03/13/map.html"><![CDATA[<h2 id="map이란">map이란</h2>
+<p>값 두개(key, velue)를 한 쌍으로 갖는 자료형, 리스트나 배열처럼 순차적으로 해당 요소 값을 구하지 않고 key 값을 통해 value 값을 얻는다</p>
+
+<h2 id="hashmap">HashMap</h2>
+
+<h3 id="put">put</h3>
+<pre>
+<code>
+import java.util.HashMap;
+
+public class Sample {
+    public static void main(String[] args) {
+        HashMap&lt;String, String&gt; map = new HashMap&lt;&gt;();
+        map.put("apple", "사과");
+        map.put("banana", "바나나");
+    }
+}
+</code>
+</pre>
+<p>이와같이 put 메소드를 이용해 key와 value에 값을 넣는다</p>
+
+<h3 id="get">get</h3>
+<pre>
+<code>
+import java.util.HashMap;
+
+public class Sample {
+    public static void main(String[] args) {
+        HashMap&lt;String, String&gt; map = new HashMap&lt;&gt;();
+        map.put("people", "사람");
+        map.put("computer", "컴퓨터");
+        System.out.println(map.get("people"));  // "사람" 출력
+    }
+}
+</code>
+</pre>
+<p>이와같이 get 메소드를 이용해 key 값을 입력하면 value 값을 출력한다
+*이때 key에 해당하는 값이 없으면 null이 출력된다</p>
+
+<h3 id="containskey">containsKey</h3>
+<p>containsKey 메소드는 map에 해당 key가 있는지 조사하여 그 결과값을 리턴한다</p>
+<pre>
+<code>
+public class Sample {
+    public static void main(String[] args) {
+        HashMap&lt;String, String&gt; map = new HashMap&lt;&gt;();
+        map.put("korea", "한국");
+        map.put("canada", "캐나다");
+        System.out.println(map.containsKey("korea"));  // true 출력
+    }
+}
+</code>
+</pre>
+
+<h3 id="remove">remove</h3>
+<p>remove 메소드는 map의 항목을 삭제하는 메소드로 key값에 해당하는 아이템(key, value)을 삭제한 후 그 value값을 리턴한다</p>
+<pre>
+<code>
+public class Sample {
+    public static void main(String[] args) {
+        HashMap&lt;String, String&gt; map = new HashMap&lt;&gt;();
+        map.put("star", "별");
+        map.put("starcraft", "스타크래프트");
+        System.out.println(map.remove("star"));  // "별" 출력, map에서 star/별 삭제
+    }
+}
+</code>
+</pre>
+
+<h3 id="size">size</h3>
+<p>size 메소드는 map의 갯수를 리턴한다</p>
+<pre>
+<code>
+public class Sample {
+    public static void main(String[] args) {
+        HashMap&lt;String, String&gt; map = new HashMap&lt;&gt;();
+        map.put("light", "빛");
+        map.put("dark", "어둠");
+        System.out.println(map.size());  //2 출력
+    }
+}
+</code>
+</pre>
+
+<h3 id="keyset">keyset</h3>
+<p>keyset은 맵의 모든 key를 모아서 리턴한다</p>
+<pre>
+<code>
+import java.util.HashMap;
+
+public class Sample {
+    public static void main(String[] args) {
+        HashMap&lt;String, String&gt; map = new HashMap&lt;&gt;();
+        map.put("asdf", "ㅁㄴㅇㄹ");
+        map.put("qwer", "ㅂㅈㄷㄱ");
+        System.out.println(map.keySet());  // [qwer, asdf] 출력
+    }
+}
+</code>
+</pre>
+
+<h2 id="linkedhashmap과-treemap">LinkedHashMap과 TreeMap</h2>
+<p>Map의 가장 큰 특징은 순서에 의존하지 않고 key로 value를 가져오는데 있다. 하지만 가끔은 Map에 입력된 순서대로 데이터를 가져오고 싶은 경우도 있고 때로는 입력된 key에 의해 정렬된 데이터를 가져오고 싶을 수도 있을 것이다. 이런경우에는 LinkedHashMap과 TreeMap을 사용하는 것이 좋다.</p>
+<ul>
+  <li>LinkedHashMap은 입력된 순서대로 데이터를 저장하는 특징을 가지고 있다.</li>
+  <li>TreeMap은 입력된 key의 오름차순 순서로 데이터를 저장하는 특징을 가지고 있다.</li>
+</ul>]]></content><author><name>thekimgyumin</name></author><category term="JAVA" /><category term="JAVA" /><summary type="html"><![CDATA[map이란 값 두개(key, velue)를 한 쌍으로 갖는 자료형, 리스트나 배열처럼 순차적으로 해당 요소 값을 구하지 않고 key 값을 통해 value 값을 얻는다]]></summary></entry><entry><title type="html">Linux명령어</title><link href="https://thekimgyumin.github.io//jekyll-theme-yat/2022/02/13/linux%EB%AA%85%EB%A0%B9%EC%96%B4.html" rel="alternate" type="text/html" title="Linux명령어" /><published>2022-02-13T00:00:00+00:00</published><updated>2022-02-13T00:00:00+00:00</updated><id>https://thekimgyumin.github.io//jekyll-theme-yat/2022/02/13/linux%EB%AA%85%EB%A0%B9%EC%96%B4</id><content type="html" xml:base="https://thekimgyumin.github.io//jekyll-theme-yat/2022/02/13/linux%EB%AA%85%EB%A0%B9%EC%96%B4.html"><![CDATA[]]></content><author><name>thekimgyumin</name></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">간단한 git 명령어 모음집</title><link href="https://thekimgyumin.github.io//jekyll-theme-yat/git/2022/02/13/%EA%B0%84%EB%8B%A8%ED%95%9C-git-%EB%AA%85%EB%A0%B9%EC%96%B4-%EB%AA%A8%EC%9D%8C%EC%A7%91.html" rel="alternate" type="text/html" title="간단한 git 명령어 모음집" /><published>2022-02-13T00:00:00+00:00</published><updated>2022-02-13T00:00:00+00:00</updated><id>https://thekimgyumin.github.io//jekyll-theme-yat/git/2022/02/13/%EA%B0%84%EB%8B%A8%ED%95%9C%20git%20%EB%AA%85%EB%A0%B9%EC%96%B4%20%EB%AA%A8%EC%9D%8C%EC%A7%91</id><content type="html" xml:base="https://thekimgyumin.github.io//jekyll-theme-yat/git/2022/02/13/%EA%B0%84%EB%8B%A8%ED%95%9C-git-%EB%AA%85%EB%A0%B9%EC%96%B4-%EB%AA%A8%EC%9D%8C%EC%A7%91.html"><![CDATA[<h2 id="근데-git이-뭐임">근데 git이 뭐임?</h2>
+
+<p>git이란 souce 관리를 위한 분산 버전 관리 시스템으로, 초기 용도는 리눅스 커널 개발이었습니다.<br />
+코드를 버전 관리함으로써 배포후 주요 버그를 발생시 빠르게 롤백 하거나 수정된 코드만을 파악해 버그를 빠르게 찾거나 한 프로젝트의 코드를 여러 사람이 함께 작업 할 수 있도록 도와주는 등 많은 이점을 가지고 있습니다.</p>
+
+<h2 id="명령어-목록">명령어 목록</h2>
+
+<h3 id="git-status">git status</h3>
+
+<p>git status 명령어는 Git 프로젝트의 상태를 확인할 수 있는 명령어입니다. 작업 디렉토리와 스테이징 영역의 상태를 확인하기 위해서 사용합니다.</p>
+
+<p>이때 git status에 의하여 인식되지 않은 파일들은 변경 여부에 상관없이 출력이 안됩니다.</p>
+
+<h3 id="git-add">git add</h3>
+
+<p>작업 디렉토리 상의 변경 내용을 스테이징 영역에 추가하기 위해서 사용하는 Git 명령어입니다.</p>
+
+<h3 id="git-commit">git commit</h3>
+
+<p>git은 개발 중인 코드의 이력을 만들 수 있는데 이때 그 변화를 로컬 저장소에 기록하는 명령어입니다</p>
+
+<h3 id="git-push">git push</h3>
+
+<p>원격 저장소에 코드 변경분을 업로드하기 위해서 사용하는 명령어 입니다.</p>
+
+<h2 id="근데-스테이징-영역이-뭐임">근데 스테이징 영역이 뭐임?</h2>
+
+<p>작업 디렉토리와 git 저장소의 변경 이력 사이에 징검다리 역할을 하는 것으로 작업 디렉토리는 아직 커밋할 준비가 안된 변경 내용을 자유롭게 수정할 수 있는 공간인 반면, 스테이징 영역은 커밋할 준비가 된 변경 내용이 Git 저장소에 기록되기 전에 대기하는 장소라고 생각할 수 있습니다.</p>]]></content><author><name>thekimgyumin</name></author><category term="git" /><category term="git" /><category term="command" /><category term="short" /><summary type="html"><![CDATA[근데 git이 뭐임?]]></summary></entry></feed>

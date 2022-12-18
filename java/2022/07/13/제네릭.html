@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-translate-customization" content="108d9124921d80c3-80e20d618ff053c8-g4f02ec6f3dba68b7-c">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>제네릭 | thekim이 하는 대충 코딩 이것저것 블로그</title>
+<meta name="generator" content="Jekyll v4.3.1">
+<meta property="og:title" content="제네릭">
+<meta name="author" content="thekimgyumin">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="제네릭 타입을 클래스 내부에서 지정하는 것이 아닌 외부에서 사용자에 의해 지정되는 것">
+<meta property="og:description" content="제네릭 타입을 클래스 내부에서 지정하는 것이 아닌 외부에서 사용자에 의해 지정되는 것">
+<link rel="canonical" href="https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/07/13/%EC%A0%9C%EB%84%A4%EB%A6%AD.html">
+<meta property="og:url" content="https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/07/13/%EC%A0%9C%EB%84%A4%EB%A6%AD.html">
+<meta property="og:site_name" content="thekim이 하는 대충 코딩 이것저것 블로그">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2022-07-13T00:00:00+00:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="제네릭">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"thekimgyumin"},"dateModified":"2022-07-13T00:00:00+00:00","datePublished":"2022-07-13T00:00:00+00:00","description":"제네릭 타입을 클래스 내부에서 지정하는 것이 아닌 외부에서 사용자에 의해 지정되는 것","headline":"제네릭","mainEntityOfPage":{"@type":"WebPage","@id":"https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/07/13/%EC%A0%9C%EB%84%A4%EB%A6%AD.html"},"url":"https://thekimgyumin.github.io//jekyll-theme-yat/java/2022/07/13/%EC%A0%9C%EB%84%A4%EB%A6%AD.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="shortcut icon" href="">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-noto-sans@0.0.72/index.min.css">
+  <link rel="stylesheet" href="/jekyll-theme-yat/assets/css/main.css">
+  <script src="/jekyll-theme-yat/assets/js/main.js"></script><link type="application/atom+xml" rel="alternate" href="https://thekimgyumin.github.io//jekyll-theme-yat/feed.xml" title="thekim이 하는 대충 코딩 이것저것 블로그">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+<!-- and it's easy to individually load additional languages -->
+<script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/go.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+// Init highlight js
+document.addEventListener('DOMContentLoaded', function(event) {
+  var els = document.querySelectorAll('pre code')
+
+  function addLangData(block) {
+    var outer = block.parentElement.parentElement.parentElement;
+    var lang = block.getAttribute('data-lang');
+    for (var i = 0; i < outer.classList.length; i++) {
+      var cls = outer.classList[i];
+      if (cls.startsWith('language-')) {
+        lang = cls;
+        break;
+      }
+    }
+    if (!lang) {
+      cls = block.getAttribute('class');
+      lang = cls ? cls.replace('hljs ', '') : '';
+    }
+    if (lang.startsWith('language-')) {
+      lang = lang.substr(9);
+    }
+    block.setAttribute('class', 'hljs ' + lang);
+    block.parentNode.setAttribute('data-lang', lang);
+  }
+
+  function addBadge(block) {
+    var enabled = ('true' || 'true').toLowerCase();
+    if (enabled == 'true') {
+      var pre = block.parentElement;
+      pre.classList.add('badge');
+    }
+  }
+
+  function handle(block) {
+    addLangData(block);
+    addBadge(block)
+    hljs.highlightBlock(block);
+  }
+
+  for (var i = 0; i < els.length; i++) {
+    var el = els[i];
+    handle(el);
+  }
+});
+</script>
+
+<style>
+  /* code language badge */
+  pre.badge::before {
+    content: attr(data-lang);
+    color: #fff;
+    background-color: #ff4e00;
+    padding: 0 .5em;
+    border-radius: 0 2px;
+    text-transform: uppercase;
+    text-align: center;
+    min-width: 32px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+  }
+
+  /* fix wrong badge display for firefox browser */
+  code > table pre::before {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="site-header " role="banner">
+
+  <div class="wrapper">
+    <div class="site-header-inner">
+<span class="site-brand"><a class="site-brand-inner" rel="author" href="/jekyll-theme-yat/">
+  <img class="site-favicon" title="thekim이 하는 대충 코딩 이것저것 블로그" src="" onerror="this.style.display='none'">
+  thekim이 하는 대충 코딩 이것저것 블로그
+</a>
+</span><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger">
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewbox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
+              </svg>
+            </span>
+          </label>
+
+          <div class="trigger">
+<a class="page-link" href="/jekyll-theme-yat/about.html">ABOUT</a><a class="page-link" href="/jekyll-theme-yat/archives.html">ARCHIVES</a><a class="page-link" href="/jekyll-theme-yat/categories.html">CATEGORIES</a><a class="page-link" href="/jekyll-theme-yat/">HOME</a><a class="page-link" href="/jekyll-theme-yat/tags.html">TAGS</a>
+
+
+
+
+</div>
+        </nav>
+</div>
+  </div>
+</header>
+
+<script>
+  function initHeader() {
+    var lastScrollY = getScrollPos().y;
+    var documentElement = document.documentElement;
+
+    function storeScrollData() {
+      var y = getScrollPos().y;var scrollStatus = "";
+
+      if (y <= 0) {
+        scrollStatus = "top";
+      } else if ((window.innerHeight + y) >= document.body.offsetHeight) {
+        scrollStatus = "bottom";
+      } else {
+        var isScrollDown = (y - lastScrollY > 0) ? true : false;
+        scrollStatus = isScrollDown ? "down" : "up";
+      }
+
+      lastScrollY = y;
+      documentElement.setAttribute("data-scroll-status", scrollStatus);
+    }
+
+    window.addEventListener('scroll', function(e) {
+      storeScrollData();
+    });
+
+    storeScrollData();
+  }
+  document.addEventListener('DOMContentLoaded', initHeader);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  function hashLocate(hashValue) {
+    hashValue = hashValue.replace(/^.*#h-/, '');
+    hashValue = decodeURIComponent(hashValue);
+    var element = document.getElementById(hashValue);
+
+    if (!element) {
+      return;
+    }
+
+    var header = document.querySelector('header.site-header');
+    var headerRect = header.getBoundingClientRect();
+    var headerTop = Math.floor(headerRect.top);
+    var headerHeight = Math.floor(headerRect.height);
+    var scrollPos = getScrollPos();
+    var offsetY = element.offsetTop - (headerTop + headerHeight + 20);
+
+    if (offsetY == scrollPos.y) {
+      return;
+    }
+
+    if (headerTop == 0  && offsetY > scrollPos.y) {
+      offsetY += headerHeight + 2;
+    } else if (headerTop < 0  && offsetY < scrollPos.y) {
+      offsetY -= headerHeight - 2;
+    }
+
+    smoothScrollTo(offsetY);
+  }
+
+  // The first event occurred
+  window.addEventListener('load', function(event) {
+    if (window.location.hash) {
+      hashLocate(window.location.hash);
+    }
+  });
+
+  // The first event occurred
+  window.addEventListener('click', function(event) {
+    if (event.target.tagName.toLowerCase() == 'a') {
+      hashLocate(event.target.getAttribute('href'));
+    }
+  });
+</script>
+<div class="theme-toggle">
+  <input type="checkbox" id="theme-switch">
+  <label for="theme-switch">
+    <div class="toggle"></div>
+    <div class="names">
+      <p class="light">Light</p>
+      <p class="dark">Dark</p>
+    </div>
+  </label>
+</div>
+
+
+
+
+<script>
+  (function() {
+    var sw = document.getElementById('theme-switch');
+    var html = document.getElementsByTagName('html')[0];
+    var nightModeOption = ('auto' || 'auto').toLowerCase();
+    var storage = nightModeOption === 'manual'
+        ? localStorage
+        : sessionStorage;
+    var themeData = loadThemeData();
+
+    function saveThemeData(data) {
+      storage.setItem('theme', JSON.stringify(data));
+    }
+
+    function loadThemeData() {
+      var data = storage.getItem('theme');
+      try {
+        data = JSON.parse(data ? data : '');
+      } catch(e) {
+        data = { nightShift: undefined, autoToggleAt: 0 };
+        saveThemeData(data);
+      }
+      return data;
+    }
+
+    function handleThemeToggle(nightShift) {
+      themeData.nightShift = nightShift;
+      saveThemeData(themeData);
+      html.dataset.theme = nightShift ? 'dark' : 'light';
+      setTimeout(function() {
+        sw.checked = nightShift ? true : false;
+      }, 50);
+    }
+
+    function autoThemeToggle() {
+      // Next time point of theme toggle
+      var now = new Date();
+      var toggleAt = new Date();
+      var hours = now.getHours();
+      var nightShift = hours >= 19 || hours <=7;
+
+      if (nightShift) {
+        if (hours > 7) {
+          toggleAt.setDate(toggleAt.getDate() + 1);
+        }
+        toggleAt.setHours(7);
+      } else {
+        toggleAt.setHours(19);
+      }
+
+      toggleAt.setMinutes(0);
+      toggleAt.setSeconds(0);
+      toggleAt.setMilliseconds(0)
+
+      var delay = toggleAt.getTime() - now.getTime();
+
+      // auto toggle theme mode
+      setTimeout(function() {
+        handleThemeToggle(!nightShift);
+      }, delay);
+
+      return {
+        nightShift: nightShift,
+        toggleAt: toggleAt.getTime()
+      };
+    }
+
+    // Listen the theme toggle event
+    sw.addEventListener('change', function(event) {
+      handleThemeToggle(event.target.checked);
+    });
+
+    if (nightModeOption == 'auto') {
+      var data = autoThemeToggle();
+
+      // Toggle theme by local setting
+      if (data.toggleAt > themeData.autoToggleAt) {
+        themeData.autoToggleAt = data.toggleAt;
+        handleThemeToggle(data.nightShift);
+      } else {
+        handleThemeToggle(themeData.nightShift);
+      }
+    } else if (nightModeOption == 'manual') {
+      handleThemeToggle(themeData.nightShift);
+    } else {
+      var nightShift = themeData.nightShift;
+      if (nightShift === undefined) {
+        nightShift = nightModeOption === 'on';
+      }
+      handleThemeToggle(nightShift);
+    }
+  })();
+</script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="framework">
+  <section class="main">
+
+     <div class="post">
+  <section>
+
+
+
+
+
+
+
+
+
+<header class="post-header">
+  <h1 class="post-title p-name" itemprop="name headline">제네릭</h1>
+  <h2 class="post-subtitle"></h2>
+
+  <p class="post-meta">
+    <time class="dt-published" datetime="2022-07-13T00:00:00+00:00" itemprop="datePublished"><i class="fa fa-calendar"></i> Jul 13, 2022
+    </time>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 12 mins</span>
+  </p>
+<div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#JAVA">#JAVA</a></div></header>
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <div class="post-content e-content" itemprop="articleBody">
+
+      <h2 id="제네릭">제네릭</h2>
+<p>타입을 클래스 내부에서 지정하는 것이 아닌 외부에서 사용자에 의해 지정되는 것</p>
+
+<p>특정 타입을 미리 지정해주는 것이 아닌 필요에 의해 지정할 수 있도록 하는 일반 타입</p>
+
+<h3 id="장점">장점</h3>
+<p>잘못된 타입이 들어올 수 있는 것을 컴파일 단계에서 방지할 수 있다</p>
+
+<p>클래스 외부에서 타입을 지정해주기 때문에 따로 타입을 체크하고 변환해줄 필요가 없다(=관리하기 편하다)</p>
+
+<p>비슷한 기능을 지원하는 경우 코드의 재사용성이 높아진다</p>
+<hr>
+<h2 id="사용방법">사용방법</h2>
+<p>보통 제네릭은 아래 표의 타입들이 많이 쓰인다
+|타입|설명|
+|—|—|
+|&lt;T&gt;|Type|
+|&lt;E&gt;|Element|
+|&lt;K&gt;|Key|
+|&lt;V&gt;|Value|
+|&lt;N&gt;|Number|</p>
+
+<h3 id="선언-및-생성-방법">선언 및 생성 방법</h3>
+<h4 id="1-클래스-및-인터페이스-선언">1. 클래스 및 인터페이스 선언</h4>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Classname</span> <span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="o">{...}</span>
+<span class="kd">public</span> <span class="nc">Interface</span> <span class="nc">InterfaceName</span> <span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="o">{...}</span>
+</code></pre></div></div>
+<p>기본적으로 제네릭 클래스나 인터페이스의 경우 위와 같이 선언한다</p>
+
+<p>T 타입은 해당 블럭 {…} 안에서까지 유효하다</p>
+
+<p>또한 여기서 더 나아가 제네릭 타입을 두 개로 둘 수 있다</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Classname</span> <span class="o">&lt;</span><span class="no">T</span><span class="o">,</span> <span class="no">K</span><span class="o">&gt;</span> <span class="o">{...}</span>
+<span class="kd">public</span> <span class="nc">Interface</span> <span class="nc">InterfaceName</span> <span class="o">&lt;</span><span class="no">T</span><span class="o">,</span> <span class="no">K</span><span class="o">&gt;</span> <span class="o">{...}</span>
+</code></pre></div></div>
+<p>이렇듯 데이터 타입을 외부로부터 지정할 수 있도록 할 수 있다</p>
+
+<p>이렇게 생성된 제네릭 클래스를 사용하려면 객체를 생성해야 하는데 이때 구체적인 타입을 명시해야 한다</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ClassName</span> <span class="o">&lt;</span><span class="no">T</span><span class="o">,</span> <span class="no">K</span><span class="o">&gt;</span> <span class="o">{...}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">ClassName</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ClassName</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">Integer</span><span class="o">&gt;();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>위 예시대로라면 T는 String가 되고, K는 Integer가 된다</p>
+
+<p>이때 주의해야 할 점은 타입 파라미터로 명시할 수 있는 것은 참조 타입 밖에 올 수 없다. 즉 int, double, char 같은 primitive type은 올 수 없다는 것이다. 그래서 int형 double형 등 primitive type의 경우 Integer, Double 같은 Wrapper Type으로 쓰는 이유가 위와 같은 이유다</p>
+
+<h4 id="2-제네릭-클래스">2. 제네릭 클래스</h4>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//제네릭 클래스</span>
+<span class="kd">class</span> <span class="nc">ClassName</span><span class="o">&lt;</span><span class="no">E</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="no">E</span> <span class="n">element</span><span class="o">;</span>  <span class="c1">// 제네릭 타입 변수</span>
+    <span class="kt">void</span> <span class="nf">set</span> <span class="o">(</span><span class="no">E</span> <span class="n">element</span><span class="o">)</span> <span class="o">{</span>   <span class="c1">// 제네릭 파라미터 메소드</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">element</span> <span class="o">=</span> <span class="n">element</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="no">E</span> <span class="nf">get</span><span class="o">()</span> <span class="o">{</span>   <span class="c1">// 제네릭 타입 변환 메소드</span>
+        <span class="k">return</span> <span class="n">element</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+        <span class="nc">ClassName</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ClassName</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;();</span>
+        <span class="nc">ClassName</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ClassName</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;();</span>
+
+        <span class="n">a</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">"10"</span><span class="o">);</span>
+        <span class="n">b</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="mi">10</span><span class="o">);</span>
+
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"a data : "</span> <span class="o">+</span> <span class="n">a</span><span class="o">.</span><span class="na">get</span><span class="o">());</span>
+        <span class="c1">// 반환한 변수의 타입 출력</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"a E Type : "</span> <span class="o">+</span> <span class="n">a</span><span class="o">.</span><span class="na">get</span><span class="o">().</span><span class="na">getClass</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span>
+
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"b data : "</span> <span class="o">+</span> <span class="n">b</span><span class="o">.</span><span class="na">get</span><span class="o">());</span>
+        <span class="c1">// 반환된 변수의 타입 출력</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"b E Type : "</span> <span class="o">+</span> <span class="n">b</span><span class="o">.</span><span class="na">get</span><span class="o">().</span><span class="na">getClass</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>보면 ClassName이란 객체를 생성할 때 &lt;&gt; 안에 타입 파라미터를 지정한다.</p>
+
+<p>그러면 a객체의 ClassName의 E 제네릭 타입은 String으로 모두 변환된다.</p>
+
+<p>반대로 b객체의 ClassName의 E 제네릭 타입은 Integer으로 모두 변환된다.</p>
+
+<p>실제로 위 코드를 실행시키면 다음과 같이 출력된다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>first data : 10
+K type : java.lang.String
+Second data : 10
+V type : java.lang.Integer
+</code></pre></div></div>
+<p>이렇게 외부 클래스에서 제네릭 클래스를 생성할 때 &lt;&gt; 괄호 안에 타입을 파라미터로 지정해 주는 것이 제네릭 프로그래밍이다.</p>
+
+<h4 id="3-제네릭-메소드">3. 제네릭 메소드</h4>
+
+<p>위 과정까지는 클래스 이름 옆에 예시로 <e>라는 제네릭 타입을 붙여 해당 클래스 내에서 사용할 수 있는 E타입으로 일반화를 했다. 그러나 그 외에 별도로 한정한 제네릭도 사용할 수 있다.</e></p>
+
+<p>일반적으로 선언 방법은 다음과 같다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public &lt;T&gt; T genericMethod(T o) {   // 제네릭 메소드
+    ...
+}
+[접근 제어자] &lt;제네릭 타입&gt; [반환 타입] [메소드명] ([제네릭 타입] [파라미터]) {
+    // 텍스트
+}
+</code></pre></div></div>
+<p>클래스와는 다르게 반환 타입 이전에 &lt;&gt; 제네릭 타입을 선언한다.</p>
+
+<p>위에서 다룬 제네릭 클래스에서 활용해보도록 하자.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 제네릭 클래스</span>
+<span class="kd">class</span> <span class="nc">ClassName</span><span class="o">&lt;</span><span class="no">E</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="no">E</span> <span class="n">element</span><span class="o">;</span>  <span class="c1">// 제네릭 타입 변수</span>
+    <span class="kt">void</span> <span class="nf">set</span><span class="o">(</span><span class="no">E</span> <span class="n">element</span><span class="o">)</span> <span class="o">{</span>   <span class="c1">// 제네릭 파라미터 메소드</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">element</span> <span class="o">=</span> <span class="n">element</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="no">E</span> <span class="nf">get</span><span class="o">()</span> <span class="o">{</span>   <span class="c1">// 제네릭 타입 반환 메소드</span>
+        <span class="k">return</span> <span class="n">element</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="no">T</span> <span class="nf">genericMethod</span><span class="o">(</span><span class="no">T</span> <span class="n">o</span><span class="o">)</span> <span class="o">{</span> <span class="c1">// 제네릭 메소드</span>
+        <span class="k">return</span> <span class="n">o</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">ClassName</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ClassName</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;();</span>
+        <span class="nc">ClassName</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ClassName</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;();</span>
+
+        <span class="n">a</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">"10"</span><span class="o">);</span>
+        <span class="n">b</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="mi">10</span><span class="o">);</span>
+
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"a data : "</span> <span class="o">+</span> <span class="n">a</span><span class="o">.</span><span class="na">get</span><span class="o">());</span>
+        <span class="c1">// 반환된 변수의 타입 출력</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"a E Type : "</span> <span class="o">+</span> <span class="n">a</span><span class="o">.</span><span class="na">get</span><span class="o">().</span><span class="na">getClass</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span>
+
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"b data : "</span> <span class="o">+</span> <span class="n">b</span><span class="o">.</span><span class="na">get</span><span class="o">());</span>
+        <span class="c1">// 반환된 변수의 타입 출력</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"B E Type :"</span> <span class="o">+</span> <span class="n">b</span><span class="o">.</span><span class="na">get</span><span class="o">().</span><span class="na">getClass</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span>
+        <span class="nc">Sysetm</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+
+        <span class="c1">// 제네릭 메소드 Integer</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"&lt;T&gt; returnType : "</span> <span class="o">+</span> <span class="n">a</span><span class="o">.</span><span class="na">genericMethod</span><span class="o">(</span><span class="mi">3</span><span class="o">).</span><span class="na">getClass</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span>
+
+        <span class="c1">// 제네릭 메소드 String</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"&lt;T&gt; returnType : "</span> <span class="o">+</span> <span class="n">a</span><span class="o">.</span><span class="na">genericMethod</span><span class="o">(</span><span class="s">"ABCD"</span><span class="o">).</span><span class="na">getClass</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span>
+
+        <span class="c1">// 제네릭 메소드 ClassName b</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"&lt;T&gt; returnType : "</span> <span class="o">+</span> <span class="n">a</span><span class="o">.</span><span class="na">genericMethod</span><span class="o">(</span><span class="n">b</span><span class="o">).</span><span class="na">getClass</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>보면 ClassName이란 객체를 생성할 때 &lt;&gt; 안에 타입 파라미터를 지정한다.</p>
+
+<p>그러면 a객체의 ClassName의 E 제네릭 타입은 모두 String으로 변환된다.</p>
+
+<p>반대로 b객체의 ClassName의 E 제네릭 타입은 모두 Integer으로 변환된다.</p>
+
+<p>genericMethod()는 파라미터 타입에 따라 T 타입이 결정된다.</p>
+
+<p>실제로 위 코드를 실행시키면 다음과 같이 출력된다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a data : 10
+a E type : java.lang.String
+
+b data : 10
+b E type : java.lang.Integer
+
+&lt;T&gt; returnType : java.lang.Integer
+&lt;T&gt; returnType : java.lang.String
+&lt;T&gt; returnType : ClassName
+</code></pre></div></div>
+<p>즉 클래스에서 지정한 제네릭 유형과 별도로 메소드에서 독립적으로 제네릭 유형을 선언하여 쓸 수 있다.</p>
+
+<p>이렇게 위와 같은 방식이 필요한 이유는 ‘정적 메소드로 선언할 때 필요’하기 때문이다.</p>
+
+<p>생각해보자. 앞서 제네릭은 유형을 외부에서 지정해 준다고 했다. 즉 해당 클래스 객체가 인스턴스화 했을 때, 쉽게 말해 new 생성자로 클래스를 생성하고 &lt;&gt; 괄호 사이에 파라미터로 넘겨준 타입으로 지정이 된다는 뜻이다.</p>
+
+<p>하지만 static은 정적이라는 뜻이다. static 변수, static 함수 등 static이 붙은 것들은 기본적으로 프로그램 실행 시 메모리에 이미 올라가 있다.</p>
+
+<p>이 말은 객체 생성을 통해 접근할 필요 없이 이미 메모리에 올라가 있기 때문에 클래스 이름을 통해 바로 쓸 수 있다는 것이다.</p>
+
+<p>근데, 거꾸로 생각해 보면 static 메소드는 객체가 생성되기 전에 이미 메모리에 올라가는데 타입을 어디서 얻어올 수 있을까?</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">ClassName</span><span class="o">&lt;</span><span class="no">E</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="cm">/*
+    클래스와 같은 E 타입이더라도
+    static 메소드는 객체가 생성되기 이전 시점에
+    메모리에 먼저 올라가기 때문에
+    E 유형을 클래스로부터 얻어올 방법이 없다.
+    */</span>
+    <span class="kd">static</span> <span class="no">E</span> <span class="nf">genericMethod</span><span class="o">(</span><span class="no">E</span> <span class="n">o</span><span class="o">)</span> <span class="o">{</span>   <span class="c1">// error!</span>
+        <span class="k">return</span> <span class="n">o</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// ClassName 객체가 생성되기 전에 접근할 수 있으나 유형을 지정할 방법이 없어 에러남</span>
+        <span class="nc">ClassName</span><span class="o">.</span><span class="na">getnerMethod</span><span class="o">(</span><span class="mi">3</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>위 내용을 보면 이해가 갈 것이다.</p>
+
+<p>그렇기 때문에 제네릭이 사용되는 메소드를 정적 메소드로 두고 싶은 경우 제네릭 클래스와 별도로 독립적인 제네릭이 사용되어야 한다는 것이다.</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 제네릭 클래스</span>
+<span class="kd">class</span> <span class="nc">ClassName</span><span class="o">&lt;</span><span class="no">E</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="no">E</span> <span class="n">element</span><span class="o">;</span> <span class="c1">// 제네릭 타입 변수</span>
+    <span class="kt">void</span> <span class="nf">set</span><span class="o">(</span><span class="no">E</span> <span class="n">element</span><span class="o">)</span> <span class="o">{</span> <span class="c1">// 제네릭 파라미터 메소드</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">element</span> <span class="o">=</span> <span class="n">element</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="no">E</span> <span class="nf">get</span><span class="o">()</span> <span class="o">{</span> <span class="c1">// 제네릭 타입 반환 메소드</span>
+        <span class="k">return</span> <span class="n">element</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="c1">// 아래 메소드의 E타입은 제네릭 클래스의 E타입과 다른 독립적인 타입이다.</span>
+    <span class="kd">static</span> <span class="o">&lt;</span><span class="no">E</span><span class="o">&gt;</span> <span class="no">E</span> <span class="nf">genericMethod1</span><span class="o">(</span><span class="no">E</span> <span class="n">o</span><span class="o">)</span> <span class="o">{</span> <span class="c1">// 제네릭 메소드</span>
+        <span class="k">return</span> <span class="n">o</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kd">static</span> <span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="no">T</span> <span class="nf">genericMethod2</span><span class="o">(</span><span class="no">T</span> <span class="n">o</span><span class="o">)</span> <span class="o">{</span> <span class="c1">// 제네릭 메소드</span>
+        <span class="k">return</span> <span class="n">o</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">ClassName</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ClassName</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;();</span>
+        <span class="nc">ClassName</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ClassName</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;();</span>
+
+        <span class="n">a</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">"10"</span><span class="o">);</span>
+        <span class="n">b</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="mi">10</span><span class="o">);</span>
+
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"a data : "</span> <span class="o">+</span> <span class="n">a</span><span class="o">.</span><span class="na">get</span><span class="o">());</span>
+        <span class="c1">// 반환된 변수의 타입 출력</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"a E type : "</span> <span class="o">+</span> <span class="n">a</span><span class="o">.</span><span class="na">get</span><span class="o">().</span><span class="na">getClass</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span>
+
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"b data : "</span> <span class="o">+</span> <span class="n">b</span><span class="o">.</span><span class="na">get</span><span class="o">());</span>
+        <span class="c1">// 반환된 변수의 타입 출력</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"b E type : "</span> <span class="o">+</span> <span class="n">b</span><span class="o">.</span><span class="na">get</span><span class="o">().</span><span class="na">getClass</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+
+        <span class="c1">// 제네릭 메소드1 Integer</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"&lt;E&gt; returnType : "</span> <span class="o">+</span> <span class="nc">ClassName</span><span class="o">.</span><span class="na">genericMethod1</span><span class="o">(</span><span class="mi">3</span><span class="o">).</span><span class="na">getClass</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span>
+
+        <span class="c1">// 제네릭 메소드1 String</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"&lt;E&gt; returnType : "</span> <span class="o">+</span> <span class="nc">ClassName</span><span class="o">.</span><span class="na">genericMethod1</span><span class="o">(</span><span class="s">"ABCD"</span><span class="o">).</span><span class="na">getClass</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span>
+
+        <span class="c1">// 제네릭 메소드2 ClassName a</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"&lt;T&gt; returnType : "</span> <span class="o">+</span> <span class="nc">ClassName</span><span class="o">.</span><span class="na">genericMethod1</span><span class="o">(</span><span class="n">a</span><span class="o">).</span><span class="na">getClass</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span>
+
+        <span class="c1">// 제네릭 메소드2 Double</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"&lt;T&gt; returnType : "</span> <span class="o">+</span> <span class="nc">ClassName</span><span class="o">.</span><span class="na">genericMethod1</span><span class="o">(</span><span class="mf">3.0</span><span class="o">).</span><span class="na">getClass</span><span class="o">().</span><span class="na">getName</span><span class="o">());</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>결과는 다음과 같다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a data : 10
+a E type : java.lang.String
+
+b data : 10
+b E type : java.lang.Integer
+
+&lt;E&gt; returnType : java.lang.Integer
+&lt;E&gt; returnType : java.lang.String
+&lt;T&gt; returnType : ClassName
+&lt;T&gt; returnType : java.lang.Double
+</code></pre></div></div>
+<p>보다시피 제네릭 메소드는 제네릭 클래스 타입과 별도로 지정된다는 것을 볼 수 있다.</p>
+
+
+    </div>
+
+</article>
+<div class="post-nav">
+<a class="previous" href="/jekyll-theme-yat/java/2022/05/01/%EC%9E%90%EB%B0%94-%EC%9E%90%EB%A3%8C%ED%98%95.html" title="자바 자료형">자바 자료형</a><a class="next" href="/jekyll-theme-yat/java/2022/07/17/%EC%96%B4%EB%85%B8%ED%85%8C%EC%9D%B4%EC%85%98.html" title="어노테이션">어노테이션</a>
+</div>
+<div class="post-related">
+      <div>Related Articles</div>
+      <ul>
+        <li><a class="post-link" href="/jekyll-theme-yat/java/2021/09/05/%EC%83%9D%EC%84%B1%EC%9E%90.html" title="어노테이션">생성자</a></li>
+<li><a class="post-link" href="/jekyll-theme-yat/java/2022/05/01/%EC%9E%90%EB%B0%94-%EC%9E%90%EB%A3%8C%ED%98%95.html" title="어노테이션">자바 자료형</a></li>
+<li><a class="post-link" href="/jekyll-theme-yat/java/2022/03/20/%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC.html" title="어노테이션">예외처리</a></li>
+<li><a class="post-link" href="/jekyll-theme-yat/java/2021/12/26/%EB%B0%B0%EC%97%B4.html" title="어노테이션">배열</a></li>
+</ul>
+    </div>
+<div class="post-comments"></div></section>
+</div>
+
+
+  </section>
+  <section class="sidebar" style="margin-left: 15px;">
+    <!-- Get sidebar items --><style type="text/css" media="screen">
+.post-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+</style>
+
+<div class="post-menu">
+  <div class="post-menu-title">TOC</div>
+  <div class="post-menu-content"></div>
+</div>
+
+<script>
+  function generateContent() {
+    var menu = document.querySelector(".post-menu");
+    var menuContent =  menu.querySelector(".post-menu-content");
+    var headings = document.querySelector(".post-content").querySelectorAll("h2, h3, h4, h5, h6");
+
+    // Hide menu when no headings
+    if (headings.length === 0) {
+      return menu.style.display = "none";
+    }
+
+    // Generate post menu
+    var menuHTML = '';
+    for (var i = 0; i < headings.length; i++) {
+      var h = headings[i];
+      menuHTML += (
+        '<li class="h-' + h.tagName.toLowerCase() + '">'
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
+    }
+
+    menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
+
+    // The header element
+    var header = document.querySelector('header.site-header');
+
+    function doMenuCollapse(index, over_items) {
+      var items = menuContent.firstChild.children;
+
+      if (over_items == undefined) {
+        over_items = 20;
+      }
+
+      if (items.length < over_items) {
+        return;
+      }
+
+      var activeItem = items[index];
+      var beginItem = activeItem
+      var endItem = activeItem
+      var beginIndex = index;
+      var endIndex = index + 1;
+      while (beginIndex >= 0
+        && !items[beginIndex].classList.contains('h-h2')) {
+        beginIndex -= 1;
+      }
+      while (endIndex < items.length
+        && !items[endIndex].classList.contains('h-h2')) {
+        endIndex += 1;
+      }
+      for (var i = 0; i < beginIndex; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+      for (var i = beginIndex + 1; i < endIndex; i++) {
+        item = items[i]
+        // if (!item.classList.contains('h-h2')) {
+          item.style.display = '';
+        // }
+      }
+      for (var i = endIndex; i < items.length; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+    }
+
+    // Init menu collapsed
+    doMenuCollapse(-1);
+
+    // Active the menu item
+    window.addEventListener('scroll', function (event) {
+      var lastActive = menuContent.querySelector('.active');
+      var changed = true;
+      var activeIndex = -1;
+      for (var i = headings.length - 1; i >= 0; i--) {
+        var h = headings[i];
+        var headingRect = h.getBoundingClientRect();
+        var headerRect = header.getBoundingClientRect();
+        var headerTop = Math.floor(headerRect.top);
+        var headerHeight = Math.floor(headerRect.height);
+        var headerHeight = headerTop + headerHeight + 20;
+        if (headingRect.top <= headerHeight) {
+          var id = 'h-' + h.getAttribute('id');
+          var a = menuContent.querySelector('a[href="#' + id  + '"]');
+          var curActive = a.parentNode;
+          if (curActive) {
+            curActive.classList.add('active');
+            activeIndex = i;
+          }
+          if (lastActive == curActive) {
+            changed = false;
+          }
+          break;
+        }
+      }
+      if (changed) {
+        if (lastActive) {
+          lastActive.classList.remove('active');
+        }
+        doMenuCollapse(activeIndex);
+      }
+      event.preventDefault();
+    });
+  }
+  generateContent();
+</script>
+</section>
+</div>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/jekyll-theme-yat/"></data>
+
+  <div class="wrapper">
+    <div class="site-footer-inner">
+<div>Unpublished Work <span class="copyleft">©</span> 2017-2022 thekimgyumin</div>
+      <div>Powered by <a title="Jekyll is a simple, blog-aware, static site
+      generator." href="http://jekyllrb.com/">Jekyll</a> &amp; <a title="Yat, yet
+      another theme." href="https://github.com/jeffreytse/jekyll-theme-yat">Yat Theme</a>.</div>
+      <div class="footer-col rss-subscribe">Subscribe <a href="/jekyll-theme-yat/feed.xml">via RSS</a>
+</div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
