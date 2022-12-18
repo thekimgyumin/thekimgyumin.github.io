@@ -24,7 +24,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: 대충 thekim이 하는 코딩 블로그
+title: thekim이 하는 대충 코딩 이것저것 블로그
 email: use5686@gmail.com
 author: thekimgyumin
 
@@ -42,7 +42,7 @@ author: thekimgyumin
 #
 copyright: "Unpublished Work (cleft) 2017-{currentYear} {author}"
 
-description: "절대 이 사이트를 참고하지 마시오"
+description: "이 사이트 봐도 도움 안될 가능성 높음"
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://thekimgyumin.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
@@ -153,8 +153,8 @@ translate_langs: []
 # Page default value
 # defaults:
 #   home:
-heading: "대충 내가 코딩 끄적이는 사이트"
-subheading: "절대 참조하지 마시오"
+heading: "대충 뭔가 끄적이는 사이트"
+subheading: "참조해도 도움 안됨 수구"
 # banner: "https://user-images.githubusercontent.com/98242048/152352885-53ba563c-2656-4a08-a5f7-b6f1bcaf0356.png"
 
 # Banner default settings
